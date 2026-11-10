@@ -23,6 +23,7 @@ The following features are planned:
 ## Tech Stack
 
 **Frontend:**
+
 - React
 - TypeScript
 - Vite
@@ -32,6 +33,7 @@ The following features are planned:
 - i18next
 
 **Backend (separate repository):**
+
 - Python / FastAPI
 - GraphQL
 - PostgreSQL
@@ -71,10 +73,10 @@ Game data is stored in PostgreSQL using the Steam Dataset 2025. Apollo Client is
 
 ## Team
 
-| Developer | Role |
-|---|---|
+| Developer           | Role        |
+| ------------------- | ----------- |
 | Aleksei Ovchinnikov | Team Member |
-| Nataliya Krylova | Team Member |
+| Nataliya Krylova    | Team Member |
 
 ## Education
 
@@ -84,4 +86,4 @@ Developed as part of the [RS School](https://rs.school/) educational program.
 
 ---
 
-*Steam Дома is an independent educational project and is not affiliated with Valve Corporation or Steam.*
+_Steam Дома is an independent educational project and is not affiliated with Valve Corporation or Steam._

@@ -11,10 +11,10 @@ services:
     init: true
 
     ports:
-      - "3000:3000"
-      - "4200:4200"
-      - "5173:5173"
-      - "8080:8080"
+      - '3000:3000'
+      - '4200:4200'
+      - '5173:5173'
+      - '8080:8080'
 
     volumes:
       - .:/app
@@ -22,7 +22,7 @@ services:
 
     environment:
       NODE_ENV: development
-      NG_CLI_ANALYTICS: "false"
+      NG_CLI_ANALYTICS: 'false'
 
 volumes:
   app_node_modules:
