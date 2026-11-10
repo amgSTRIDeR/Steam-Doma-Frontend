@@ -1,5 +1,5 @@
 {
-  "name": "Universal Node.js Dev Container",
+  "name": "Steam Doma Frontend",
 
   "dockerComposeFile": "../docker-compose.dev.yml",
   "service": "app-dev",

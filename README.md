@@ -1,40 +1,86 @@
 # Steam Дома — Frontend
 
-Steam Дома is a gaming marketplace developed as a team educational project at [RS School](https://rs.school/).
+**Steam Дома** is a gaming marketplace developed as a team educational project at [RS School](https://rs.school/).
 
-The project aims to create a modern, responsive web application inspired by Steam, featuring a game catalog, search, shopping cart, and user-friendly interface.
+The project is inspired by Steam and aims to provide a modern, responsive interface for browsing and purchasing video games.
+
+**Status:** In Development
 
 ## Features
 
-The application is currently under development. Planned features include:
+The following features are planned:
 
-- **Game Catalog** — browse games with detailed information.
-- **Search & Filtering** — find games by name, genre, and other criteria.
+- **Game Catalog** — browse games with detailed information, prices, ratings, and screenshots.
+- **Search & Filtering** — search by title and filter by genres, Steam categories, platforms, and price.
 - **Shopping Cart** — add and manage selected games.
-- **Responsive Design** — optimized for desktop and mobile devices.
-- **Light & Dark Themes** — customizable appearance.
-- **Backend Integration** — dynamic content powered by an API.
+- **Authentication** — user registration, login, and account management.
+- **Admin Panel** — add and edit games, manage users, and view activity logs.
+- **Responsive Design** — support for desktop, tablet, and mobile devices.
+- **Light & Dark Themes** — switch between two visual themes.
+- **Internationalization** — Russian and English language support.
+- **GraphQL Integration** — retrieve and manage data through a backend API.
 
-## Development
+## Tech Stack
 
-The frontend is maintained in a separate repository and communicates with the application's backend through an API.
+**Frontend:**
+- React
+- TypeScript
+- Vite
+- Material UI (MUI)
+- SCSS
+- Apollo Client (GraphQL)
+- i18next
 
-Development environment setup and installation instructions will be added as the project evolves.
+**Backend (separate repository):**
+- Python / FastAPI
+- GraphQL
+- PostgreSQL
+- Steam Dataset 2025
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Docker
+- Visual Studio Code
+- Dev Containers extension for VS Code
+
+### Development with Dev Container
+
+1. Clone the repository.
+2. Open the project folder in Visual Studio Code.
+3. Run `Dev Containers: Reopen in Container` from the Command Palette.
+4. Install dependencies:
+
+   `npm install`
+
+5. Start the development server:
+
+   `npm run dev -- --host 0.0.0.0`
+
+6. Open `http://localhost:5173` in your browser.
+
+Node.js and npm are provided by the development container.
+
+## Project Architecture
+
+The frontend communicates with a separate Python backend through a GraphQL API.
+
+Game data is stored in PostgreSQL using the Steam Dataset 2025. Apollo Client is planned for GraphQL requests and client-side caching.
 
 ## Team
 
 | Developer | Role |
 |---|---|
-| **Aleksei Ovchinnikov** | Team Member |
-| **Nataliya Krylova** | Team Member |
+| Aleksei Ovchinnikov | Team Member |
+| Nataliya Krylova | Team Member |
 
 ## Education
 
-This project is developed as part of the [RS School](https://rs.school/) educational program.
+Developed as part of the [RS School](https://rs.school/) educational program.
 
 **Project type:** Team Educational Project
-
-**Status:** In Development
 
 ---
 
