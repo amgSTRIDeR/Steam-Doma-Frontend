@@ -1,89 +1,116 @@
 # Steam Дома — Frontend
 
-**Steam Дома** is a gaming marketplace developed as a team educational project at [RS School](https://rs.school/).
+Frontend-приложение для маркетплейса игр в стиле Steam, разрабатываемое в рамках учебного проекта.
 
-The project is inspired by Steam and aims to provide a modern, responsive interface for browsing and purchasing video games.
+## Описание
 
-**Status:** In Development
+Steam Дома — это frontend-приложение интернет-магазина компьютерных игр в стиле Steam. Проект разработан в рамках учебного задания и направлен на создание современной интерфейсной части сервиса для просмотра каталога игр, фильтрации по жанрам и платформам, работы с корзиной и дальнейшего расширения функционала.
 
-## Features
+## Возможности
 
-The following features are planned:
+- каталог игр с карточками, ценами и описанием
+- поиск и фильтрация по жанрам, платформам и категориям
+- оформление корзины покупок
+- адаптивный интерфейс для различных устройств
+- поддержка темного и светлого оформления
+- подготовка к интеграции с backend API
 
-- **Game Catalog** — browse games with detailed information, prices, ratings, and screenshots.
-- **Search & Filtering** — search by title and filter by genres, Steam categories, platforms, and price.
-- **Shopping Cart** — add and manage selected games.
-- **Authentication** — user registration, login, and account management.
-- **Admin Panel** — add and edit games, manage users, and view activity logs.
-- **Responsive Design** — support for desktop, tablet, and mobile devices.
-- **Light & Dark Themes** — switch between two visual themes.
-- **Internationalization** — Russian and English language support.
-- **GraphQL Integration** — retrieve and manage data through a backend API.
+## Технологии
 
-## Tech Stack
-
-**Frontend:**
-
-- React
+- React 19
 - TypeScript
-- Vite
-- Material UI (MUI)
-- SCSS
-- Apollo Client (GraphQL)
-- i18next
+- Vite 8
+- Vitest + Testing Library
+- ESLint + Prettier
+- Docker / Dev Container
 
-**Backend (separate repository):**
+## Структура проекта
 
-- Python / FastAPI
-- GraphQL
-- PostgreSQL
-- Steam Dataset 2025
+```text
+/app
+├── Dockerfile.dev
+├── docker-compose.dev.yml
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig*.json
+├── vite.config.ts
+├── public/
+├── src/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx
+│   └── test/
+│       ├── App.test.tsx
+│       └── setup.ts
+└── coverage/
+```
 
-## Getting Started
+## Требования
 
-### Prerequisites
-
+- Node.js 22+ / npm
 - Git
-- Docker
-- Visual Studio Code
-- Dev Containers extension for VS Code
+- Docker (если используете контейнерную среду)
+- VS Code с расширением Dev Containers (опционально)
 
-### Development with Dev Container
+## Локальный запуск
 
-1. Clone the repository.
-2. Open the project folder in Visual Studio Code.
-3. Run `Dev Containers: Reopen in Container` from the Command Palette.
-4. Install dependencies:
+Установите зависимости:
 
-   `npm install`
+```bash
+npm install
+```
 
-5. Start the development server:
+Если вы запускаете проект внутри Dev Container, используйте команду с привязкой к адресу контейнера:
 
-   `npm run dev -- --host 0.0.0.0`
+```bash
+npm run dev -- --host 0.0.0.0
+```
 
-6. Open `http://localhost:5173` in your browser.
+Если запуск выполняется локально на хост-машине, достаточно:
 
-Node.js and npm are provided by the development container.
+```bash
+npm run dev
+```
 
-## Project Architecture
+После запуска приложение будет доступно по адресу:
 
-The frontend communicates with a separate Python backend through a GraphQL API.
+```text
+http://localhost:5173
+```
 
-Game data is stored in PostgreSQL using the Steam Dataset 2025. Apollo Client is planned for GraphQL requests and client-side caching.
+## Запуск через Docker
 
-## Team
+Для локальной разработки можно использовать контейнер:
 
-| Developer           | Role        |
-| ------------------- | ----------- |
-| Aleksei Ovchinnikov | Team Member |
-| Nataliya Krylova    | Team Member |
+```bash
+docker compose -f docker-compose.dev.yml up -d --build
+```
 
-## Education
+После этого проект доступен на стандартных портах Vite и локальной разработки (включая `5173`).
 
-Developed as part of the [RS School](https://rs.school/) educational program.
+## Полезные команды
 
-**Project type:** Team Educational Project
+```bash
+npm run dev         # запуск dev-сервера
+npm run build       # сборка продакшн-версии
+npm run preview     # локальный просмотр сборки
+npm run test        # запуск тестов
+npm run test:run    # прогон тестов один раз
+npm run lint        # проверка ESLint
+npm run format      # форматирование Prettier
+```
+
+## Тестирование
+
+Проект использует Vitest и Testing Library для проверки базового рендера приложения.
+
+```bash
+npm run test:run
+```
 
 ---
 
-_Steam Дома is an independent educational project and is not affiliated with Valve Corporation or Steam._
+_Steam Дома — учебный проект, не связан с Valve Corporation и официальным сервисом Steam._
