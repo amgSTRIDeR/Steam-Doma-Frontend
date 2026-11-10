@@ -17,7 +17,7 @@
 
   "waitFor": "postCreateCommand",
 
-  "postCreateCommand": "if [ -f package-lock.json ]; then npm ci; elif [ -f yarn.lock ]; then yarn install; else npm install; fi",
+"postCreateCommand": "if [ -f package.json ]; then if [ -f package-lock.json ]; then npm ci; elif [ -f yarn.lock ]; then yarn install; else npm install; fi; else echo 'package.json not found. Skipping npm install.'; fi",
 
   "customizations": {
     "jetbrains": {
