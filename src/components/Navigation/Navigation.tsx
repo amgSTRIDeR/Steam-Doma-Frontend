@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navigation() {
   return (
-    <nav aria-label="Main navigatin">
+    <nav aria-label="Main navigation">
       <ul>
         <li>
           <NavLink to="/">About</NavLink>
