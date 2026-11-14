@@ -1,41 +1,116 @@
 # Steam Дома — Frontend
 
-Steam Дома is a gaming marketplace developed as a team educational project at [RS School](https://rs.school/).
+Frontend-приложение для маркетплейса игр в стиле Steam, разрабатываемое в рамках учебного проекта.
 
-The project aims to create a modern, responsive web application inspired by Steam, featuring a game catalog, search, shopping cart, and user-friendly interface.
+## Описание
 
-## Features
+Steam Дома — это frontend-приложение интернет-магазина компьютерных игр в стиле Steam. Проект разработан в рамках учебного задания и направлен на создание современной интерфейсной части сервиса для просмотра каталога игр, фильтрации по жанрам и платформам, работы с корзиной и дальнейшего расширения функционала.
 
-The application is currently under development. Planned features include:
+## Возможности
 
-- **Game Catalog** — browse games with detailed information.
-- **Search & Filtering** — find games by name, genre, and other criteria.
-- **Shopping Cart** — add and manage selected games.
-- **Responsive Design** — optimized for desktop and mobile devices.
-- **Light & Dark Themes** — customizable appearance.
-- **Backend Integration** — dynamic content powered by an API.
+- каталог игр с карточками, ценами и описанием
+- поиск и фильтрация по жанрам, платформам и категориям
+- оформление корзины покупок
+- адаптивный интерфейс для различных устройств
+- поддержка темного и светлого оформления
+- подготовка к интеграции с backend API
 
-## Development
+## Технологии
 
-The frontend is maintained in a separate repository and communicates with the application's backend through an API.
+- React 19
+- TypeScript
+- Vite 8
+- Vitest + Testing Library
+- ESLint + Prettier
+- Docker / Dev Container
 
-Development environment setup and installation instructions will be added as the project evolves.
+## Структура проекта
 
-## Team
+```text
+/app
+├── Dockerfile.dev
+├── docker-compose.dev.yml
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig*.json
+├── vite.config.ts
+├── public/
+├── src/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx
+│   └── test/
+│       ├── App.test.tsx
+│       └── setup.ts
+└── coverage/
+```
 
-| Developer | Role |
-|---|---|
-| **Aleksei Ovchinnikov** | Team Member |
-| **Nataliya Krylova** | Team Member |
+## Требования
 
-## Education
+- Node.js 22+ / npm
+- Git
+- Docker (если используете контейнерную среду)
+- VS Code с расширением Dev Containers (опционально)
 
-This project is developed as part of the [RS School](https://rs.school/) educational program.
+## Локальный запуск
 
-**Project type:** Team Educational Project
+Установите зависимости:
 
-**Status:** In Development
+```bash
+npm install
+```
+
+Если вы запускаете проект внутри Dev Container, используйте команду с привязкой к адресу контейнера:
+
+```bash
+npm run dev -- --host 0.0.0.0
+```
+
+Если запуск выполняется локально на хост-машине, достаточно:
+
+```bash
+npm run dev
+```
+
+После запуска приложение будет доступно по адресу:
+
+```text
+http://localhost:5173
+```
+
+## Запуск через Docker
+
+Для локальной разработки можно использовать контейнер:
+
+```bash
+docker compose -f docker-compose.dev.yml up -d --build
+```
+
+После этого проект доступен на стандартных портах Vite и локальной разработки (включая `5173`).
+
+## Полезные команды
+
+```bash
+npm run dev         # запуск dev-сервера
+npm run build       # сборка продакшн-версии
+npm run preview     # локальный просмотр сборки
+npm run test        # запуск тестов
+npm run test:run    # прогон тестов один раз
+npm run lint        # проверка ESLint
+npm run format      # форматирование Prettier
+```
+
+## Тестирование
+
+Проект использует Vitest и Testing Library для проверки базового рендера приложения.
+
+```bash
+npm run test:run
+```
 
 ---
 
-*Steam Дома is an independent educational project and is not affiliated with Valve Corporation or Steam.*
+_Steam Дома — учебный проект, не связан с Valve Corporation и официальным сервисом Steam._
