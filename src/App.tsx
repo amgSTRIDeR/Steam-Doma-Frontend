@@ -6,7 +6,7 @@ import Catalog from './pages/Catalog/Catalog';
 import Cart from './pages/Cart/Cart';
 import GameDetails from './pages/GameDetails/GameDetails';
 
-import './App.css';
+import './app.scss';
 
 function App() {
   return (

@@ -1,0 +1,8 @@
+@use './styles/variables' as sd;
+
+@include sd.foundation();
+
+.app {
+  background-color: sd.color(bg);
+  color: sd.color(text);
+}
