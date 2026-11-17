@@ -1,5 +1,5 @@
 {
-  "name": "Universal Node.js Dev Container",
+  "name": "Steam Doma Frontend",
 
   "dockerComposeFile": "../docker-compose.dev.yml",
   "service": "app-dev",
@@ -8,26 +8,25 @@
   "overrideCommand": false,
   "shutdownAction": "stopCompose",
 
-  "forwardPorts": [
-    3000,
-    4200,
-    5173,
-    8080
-  ],
+  "forwardPorts": [3000, 4200, 5173, 8080],
 
   "waitFor": "postCreateCommand",
 
-"postCreateCommand": "if [ -f package.json ]; then if [ -f package-lock.json ]; then npm ci; elif [ -f yarn.lock ]; then yarn install; else npm install; fi; else echo 'package.json not found. Skipping npm install.'; fi",
+  "postCreateCommand": "if [ -f package.json ]; then if [ -f package-lock.json ]; then npm ci; elif [ -f yarn.lock ]; then yarn install; else npm install; fi; else echo 'package.json not found. Skipping npm install.'; fi",
 
   "customizations": {
     "jetbrains": {
       "backend": "WebStorm"
     },
     "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
-      ]
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    },
+    "settings": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      }
     }
   }
 }
