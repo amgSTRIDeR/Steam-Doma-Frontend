@@ -65,13 +65,12 @@ export type IconName =
 
 interface IconProps {
   name: IconName;
-  size?: number;
   className?: string;
 }
 
-export default function Icon({ name, size = 24, className }: IconProps) {
+export default function Icon({ name, className }: IconProps) {
   return (
-    <svg width={size} height={size} className={className} aria-hidden="true" focusable="false">
+    <svg className={className} aria-hidden="true" focusable="false">
       <use href={`${sprite}#${name}`} />
     </svg>
   );

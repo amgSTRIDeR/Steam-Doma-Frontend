@@ -1,0 +1,22 @@
+@use '../../styles/variables' as sd;
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  &__icon {
+    width: sd.component(icon-size-lg);
+    //height: sd.component(icon-size-sm);
+    color: sd.color(primary);
+  }
+
+  &__title {
+    font-family: sd.$sd-font-family;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2;
+    color: sd.color(logoTitle);
+  }
+}

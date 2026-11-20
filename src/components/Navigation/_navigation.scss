@@ -1,0 +1,22 @@
+@use '../../styles/variables' as sd;
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto 0 40px;
+  }
+
+  &__link {
+    font-family: sd.$sd-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: sd.color(sub);
+  }
+}

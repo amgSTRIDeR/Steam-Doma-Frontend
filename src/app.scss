@@ -1,5 +1,11 @@
 @use './styles/variables' as sd;
 
+@use './components/Header/header';
+@use './components/Container/container';
+@use './components/Navigation/navigation';
+@use './components/Logo/logo';
+@use './components/Search/search';
+
 @include sd.foundation();
 
 .app {

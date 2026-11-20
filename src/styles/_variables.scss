@@ -24,6 +24,8 @@ $sd-colors-light: (
   dangerSoft: #ffe5ed,
   hero: #0d223b,
   panel: #f0f6fc,
+  logo: #1f65da,
+  logoTitle: #172b48,
 ) !default;
 
 $sd-colors-dark: (
@@ -47,6 +49,8 @@ $sd-colors-dark: (
   dangerSoft: #492634,
   hero: #071020,
   panel: #081725,
+  logo: #459dfe,
+  logoTitle: #f7faff,
 ) !default;
 
 /// Theme-aware color for use in component declarations.
@@ -236,6 +240,7 @@ $sd-components: (
   control-height-sm: 32px,
   control-height-md: 40px,
   control-height-lg: 48px,
+  icon-size-xs: 12px,
   icon-size-sm: 16px,
   icon-size-md: 20px,
   icon-size-lg: 24px,
@@ -376,6 +381,12 @@ $sd-elevation-dark: (
       background-color map.get($sd-components, transition-normal) ease,
       color map.get($sd-components, transition-normal) ease;
   }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
   button,
   input,
   textarea,
@@ -386,6 +397,16 @@ $sd-elevation-dark: (
     outline: 2px solid color(primary);
     outline-offset: 2px;
   }
+}
+
+@mixin visuallyHidden() {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 /*
