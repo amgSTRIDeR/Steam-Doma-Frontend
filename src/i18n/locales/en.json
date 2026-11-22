@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "about": "About",
+    "shop": "Shop",
+    "catalog": "Catalog"
+  },
+  "search": {
+    "label": "Enter game title",
+    "placeholder": "Search games..."
+  }
+}
