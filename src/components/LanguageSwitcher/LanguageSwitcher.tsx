@@ -28,9 +28,9 @@ export default function LanguageSwitcher() {
         aria-controls="language-list"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <Icon name="icon-globe" />
-        <span>{currentLanguage.toUpperCase()}</span>
-        <Icon name="icon-chevron-down" />
+        <Icon name="icon-globe" className="language-switcher__icon" />
+        <span className="language-switcher__text">{currentLanguage.toUpperCase()}</span>
+        <Icon name="icon-chevron-down" className="language-switcher__down" />
       </button>
 
       {isOpen && (

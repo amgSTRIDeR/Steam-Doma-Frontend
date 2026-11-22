@@ -1,0 +1,50 @@
+@use '../../styles/variables' as sd;
+
+.language-switcher {
+  color: sd.color(text);
+  position: relative;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    gap: sd.space(10);
+    padding: 10px 5px;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__down {
+    width: 10px;
+    height: 5px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    font-size: 14px;
+    height: 0;
+    overflow: hidden;
+    animation: open 0.5s forwards;
+    transition: height ease-in;
+  }
+}
+
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 40px;
+  }
+}
