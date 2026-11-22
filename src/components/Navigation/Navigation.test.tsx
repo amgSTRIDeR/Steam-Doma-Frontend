@@ -3,18 +3,21 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import Navigation from './Navigation';
+import { ThemeProvider } from '../../provider/ThemeProvider';
 
 function renderNavigation(initialEntry = '/') {
   return render(
-    <MemoryRouter initialEntries={[initialEntry]}>
-      <Navigation />
+    <ThemeProvider>
+      <MemoryRouter initialEntries={[initialEntry]}>
+        <Navigation />
 
-      <Routes>
-        <Route path="/" element={<h1>О нас</h1>} />
-        <Route path="/home" element={<h1>Магазин</h1>} />
-        <Route path="/catalog" element={<h1>Каталог</h1>} />
-      </Routes>
-    </MemoryRouter>,
+        <Routes>
+          <Route path="/" element={<h1>О нас</h1>} />
+          <Route path="/home" element={<h1>Магазин</h1>} />
+          <Route path="/catalog" element={<h1>Каталог</h1>} />
+        </Routes>
+      </MemoryRouter>
+    </ThemeProvider>,
   );
 }
 
