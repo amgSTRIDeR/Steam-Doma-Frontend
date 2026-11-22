@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { describe, expect, it } from 'vitest';
-import Navigation from './Navigation';
+import { describe, expect, it, vi } from 'vitest';
 import { ThemeProvider } from '../../provider/ThemeProvider';
+import Navigation from './Navigation';
+import Search from '../Search/Search';
 
 function renderNavigation(initialEntry = '/') {
   return render(
@@ -73,7 +74,7 @@ describe('Navigation', () => {
     );
   });
 
-  /* it('should call onChangeHandler when user types', async () => {
+  it('should call onChangeHandler when user types', async () => {
     const user = userEvent.setup();
     const onChangeHandler = vi.fn();
 
@@ -93,5 +94,5 @@ describe('Navigation', () => {
     await user.type(searchInput, 'The Witcher');
 
     expect(onChangeHandler).toHaveBeenCalled();
-  }); */
+  });
 });
