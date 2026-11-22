@@ -1,3 +1,4 @@
+import { ThemeProvider } from './provider/ThemeProvider';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import About from './pages/About/About';
@@ -10,15 +11,17 @@ import './app.scss';
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<About />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/game/:id" element={<GameDetails />} />
-      </Route>
-    </Routes>
+    <ThemeProvider>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<About />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/game/:id" element={<GameDetails />} />
+        </Route>
+      </Routes>
+    </ThemeProvider>
   );
 }
 
