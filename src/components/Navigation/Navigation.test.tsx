@@ -95,4 +95,19 @@ describe('Navigation', () => {
 
     expect(onChangeHandler).toHaveBeenCalled();
   });
+
+  it('should call the search handler when user types', async () => {
+    const user = userEvent.setup();
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    renderNavigation();
+
+    const searchInput = screen.getByRole('searchbox', {
+      name: 'Введите название игры',
+    });
+
+    await user.type(searchInput, 'The Witcher');
+
+    expect(consoleSpy).toHaveBeenCalledWith('game search');
+  });
 });
