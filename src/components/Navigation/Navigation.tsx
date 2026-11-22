@@ -16,11 +16,9 @@ export default function Navigation() {
         <li className="nav__item">
           <NavLink to="/catalog">Каталог</NavLink>
         </li>
-        <li className="nav__item">
-          <NavLink to="/cart">Cart</NavLink>
-        </li>
       </ul>
       <Search
+        labelText="Введите название игры"
         placeholder="Поиск по играм..."
         name="game-search"
         onChangeHandler={() => console.log('game search')}

@@ -26,6 +26,7 @@ $sd-colors-light: (
   panel: #f0f6fc,
   logo: #1f65da,
   logoTitle: #172b48,
+  navBorder: #284564,
 ) !default;
 
 $sd-colors-dark: (
@@ -51,6 +52,7 @@ $sd-colors-dark: (
   panel: #081725,
   logo: #459dfe,
   logoTitle: #f7faff,
+  navBorder: #284564,
 ) !default;
 
 /// Theme-aware color for use in component declarations.
