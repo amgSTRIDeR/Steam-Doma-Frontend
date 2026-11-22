@@ -5,8 +5,17 @@
 @use './components/Navigation/navigation';
 @use './components/Logo/logo';
 @use './components/Search/search';
+@use './components/ThemeSwitcher/themeSwitcher';
 
 @include sd.foundation();
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 .app {
   background-color: sd.color(bg);

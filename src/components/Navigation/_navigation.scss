@@ -3,12 +3,13 @@
 .nav {
   display: flex;
   align-items: center;
+  gap: 40px;
 
   &__list {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 0 auto 0 40px;
+    margin-right: auto;
   }
 
   &__link {

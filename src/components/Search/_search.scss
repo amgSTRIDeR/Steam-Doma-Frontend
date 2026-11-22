@@ -16,7 +16,9 @@
     width: 100%;
     color: sd.color(text);
     background: sd.color(raised);
-    padding: 15px 16px 15px 45px;
+    padding: 10px 16px 10px 45px;
+    border-radius: sd.radius(md);
+    border: 1px solid sd.color(navBorder);
 
     &::placeholder {
       font-family: sd.$sd-font-family;
