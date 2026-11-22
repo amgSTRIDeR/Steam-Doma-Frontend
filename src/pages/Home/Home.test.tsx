@@ -11,6 +11,6 @@ describe('Home', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
+    expect(screen.getByText('Магазин')).toBeInTheDocument();
   });
 });

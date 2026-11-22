@@ -11,6 +11,6 @@ describe('Cart', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText('Cart')).toBeInTheDocument();
+    expect(screen.getByText('Корзина')).toBeInTheDocument();
   });
 });

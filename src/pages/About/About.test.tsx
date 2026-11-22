@@ -11,6 +11,6 @@ describe('About', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('О нас')).toBeInTheDocument();
   });
 });
