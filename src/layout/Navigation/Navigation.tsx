@@ -5,29 +5,25 @@ import Search from '../../components/Search/Search';
 import ThemeSwitcher from '../../components/ThemeSwitcher/ThemeSwitcher';
 import LanguageSwitcher from '../../components/LanguageSwitcher/LanguageSwitcher';
 import Icon from '../../components/Icon/Icon';
+import NavigationLink from '../../components/NavigationLink/NavigationLink';
+
+type HeaderLinks = 'home' | 'catalog' | 'about';
 
 export default function Navigation() {
   const { t } = useTranslation();
+  const links: HeaderLinks[] = ['about', 'home', 'catalog'];
 
   return (
     <nav aria-label="Main navigation" className="nav">
       <Logo />
       <ul className="nav__list">
-        <li className="nav__item">
-          <NavLink to="/" className="nav__link">
-            {t('navigation.about')}
-          </NavLink>
-        </li>
-        <li className="nav__item">
-          <NavLink to="/home" className="nav__link">
-            {t('navigation.shop')}
-          </NavLink>
-        </li>
-        <li className="nav__item">
-          <NavLink to="/catalog" className="nav__link">
-            {t('navigation.catalog')}
-          </NavLink>
-        </li>
+        {links.map((link) => (
+          <NavigationLink
+            text={t(`navigation.${link}`)}
+            path={link === 'about' ? '/' : link}
+            key={link}
+          />
+        ))}
       </ul>
       <Search
         labelText="Введите название игры"

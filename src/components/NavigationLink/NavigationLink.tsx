@@ -2,13 +2,13 @@ import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import type { IconName } from '../Icon/Icon';
 
-type SidebarLinkProps = {
+type NavigationLinkProps = {
   readonly path: string;
   readonly name?: IconName;
   readonly text: string;
 };
 
-export default function SidebarLink({ path, text, name }: SidebarLinkProps) {
+export default function NavigationLink({ path, text, name }: NavigationLinkProps) {
   return (
     <li className="nav__item">
       <NavLink
