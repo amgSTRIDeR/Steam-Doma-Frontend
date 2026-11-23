@@ -12,7 +12,7 @@ export default function NavigationLink({ path, text, name }: NavigationLinkProps
   return (
     <li className="nav__item">
       <NavLink
-        to={`/${path}`}
+        to={path}
         end={path === '/'}
         className={({ isActive }) => (isActive ? 'nav__link nav__link_active' : 'nav__link')}
       >

@@ -12,17 +12,18 @@ type HeaderLinks = 'home' | 'catalog' | 'about';
 export default function Navigation() {
   const { t } = useTranslation();
   const links: HeaderLinks[] = ['about', 'home', 'catalog'];
+  const paths: Record<HeaderLinks, string> = {
+    about: '/',
+    home: '/home',
+    catalog: '/catalog',
+  };
 
   return (
     <nav aria-label="Main navigation" className="nav">
       <Logo />
       <ul className="nav__list">
         {links.map((link) => (
-          <NavigationLink
-            text={t(`navigation.${link}`)}
-            path={link === 'about' ? '/' : link}
-            key={link}
-          />
+          <NavigationLink text={t(`navigation.${link}`)} path={paths[link]} key={link} />
         ))}
       </ul>
       <Search

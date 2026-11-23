@@ -28,7 +28,7 @@ describe('Navigation', () => {
     renderNavigation();
 
     expect(screen.getByRole('link', { name: 'О нас' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Магазин' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Главная' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Каталог' })).toBeInTheDocument();
     //expect(screen.getByRole('link', { name: 'Корзина' })).toBeInTheDocument();
   });
@@ -37,7 +37,7 @@ describe('Navigation', () => {
     renderNavigation();
 
     expect(screen.getByRole('link', { name: 'О нас' })).toHaveAttribute('href', '/');
-    expect(screen.getByRole('link', { name: 'Магазин' })).toHaveAttribute('href', '/home');
+    expect(screen.getByRole('link', { name: 'Главная' })).toHaveAttribute('href', '/home');
     expect(screen.getByRole('link', { name: 'Каталог' })).toHaveAttribute('href', '/catalog');
     //expect(screen.getByRole('link', { name: 'Корзина' })).toHaveAttribute('href', '/cart');
   });

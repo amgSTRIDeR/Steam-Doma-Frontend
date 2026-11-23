@@ -4,8 +4,15 @@ import NavigationLink from '../../components/NavigationLink/NavigationLink';
 type SidebarLinks = 'home' | 'catalog' | 'cart' | 'about';
 
 export default function SidebarNavigation() {
-  const links: SidebarLinks[] = ['home', 'catalog', 'cart', 'about'];
   const { t } = useTranslation();
+  const links: SidebarLinks[] = ['home', 'catalog', 'cart', 'about'];
+  const paths: Record<SidebarLinks, string> = {
+    about: '/',
+    home: '/home',
+    catalog: '/catalog',
+    cart: '/cart',
+  };
+
   return (
     <nav className="sidebar__nav" aria-label="Sidebar Navigatin">
       <h2 className="sidebar__title">{t('sidebar.title')}</h2>
@@ -14,7 +21,7 @@ export default function SidebarNavigation() {
           <NavigationLink
             text={t(`navigation.${link}`)}
             name={`icon-${link}`}
-            path={link === 'about' ? '/' : link}
+            path={paths[link]}
             key={link}
           />
         ))}
