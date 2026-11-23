@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Logo from '../Logo/Logo';
 import Search from '../Search/Search';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
-import { useTranslation } from 'react-i18next';
+import Icon from '../Icon/Icon';
 
 export default function Navigation() {
   const { t } = useTranslation();
@@ -36,6 +37,13 @@ export default function Navigation() {
       />
       <ThemeSwitcher />
       <LanguageSwitcher />
+      <NavLink to="/cart" className="nav__cart" aria-label={t('navigation.cart')}>
+        <Icon className="nav__cart-icon" name="icon-shopping-cart" />
+        <span className="nav__cart-count">2</span>
+      </NavLink>
+      <NavLink to="/profile" className="nav__user" aria-label={t('navigation.user')}>
+        <Icon className="nav__user-icon" name="icon-user" />
+      </NavLink>
     </nav>
   );
 }
