@@ -1,13 +1,18 @@
 {
   "navigation": {
     "about": "About",
+    "home": "Home",
     "shop": "Shop",
     "catalog": "Catalog",
-    "cart": "Go to Cart",
-    "user": "Go to your account"
+    "toCart": "Go to Cart",
+    "user": "Go to your account",
+    "cart": "Cart"
   },
   "search": {
     "label": "Enter game title",
     "placeholder": "Search games..."
+  },
+  "sidebar": {
+    "title": "Navigation"
   }
 }

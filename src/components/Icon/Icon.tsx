@@ -20,7 +20,7 @@ export type IconName =
   | 'icon-gamepad'
   | 'icon-heart'
   | 'icon-star'
-  | 'icon-shopping-cart'
+  | 'icon-cart'
   | 'icon-plus'
   | 'icon-minus'
   | 'icon-user'
@@ -61,7 +61,8 @@ export type IconName =
   | 'icon-rating'
   | 'icon-discount'
   | 'icon-genre'
-  | 'icon-shopping-bag';
+  | 'icon-shopping-bag'
+  | 'icon-about';
 
 interface IconProps {
   name: IconName;

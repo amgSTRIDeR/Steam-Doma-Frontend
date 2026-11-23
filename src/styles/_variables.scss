@@ -27,6 +27,7 @@ $sd-colors-light: (
   logo: #1f65da,
   logoTitle: #172b48,
   navBorder: #a4b8d1,
+  activeLink: #dceaff,
 ) !default;
 
 $sd-colors-dark: (
@@ -53,6 +54,7 @@ $sd-colors-dark: (
   logo: #459dfe,
   logoTitle: #f7faff,
   navBorder: #284564,
+  activeLink: #144681,
 ) !default;
 
 /// Theme-aware color for use in component declarations.
@@ -404,6 +406,10 @@ $sd-elevation-dark: (
     border: none;
     background: transparent;
     cursor: pointer;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto 1fr;
   }
 }
 

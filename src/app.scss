@@ -7,6 +7,7 @@
 @use './components/Search/search';
 @use './components/ThemeSwitcher/themeSwitcher';
 @use './components/LanguageSwitcher/languageSwitcher';
+@use './layout//Sidebar/sidebar';
 
 @include sd.foundation();
 

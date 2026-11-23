@@ -38,7 +38,7 @@ export default function Navigation() {
       <ThemeSwitcher />
       <LanguageSwitcher />
       <NavLink to="/cart" className="nav__cart" aria-label={t('navigation.cart')}>
-        <Icon className="nav__cart-icon" name="icon-shopping-cart" />
+        <Icon className="nav__cart-icon" name="icon-cart" />
         <span className="nav__cart-count">2</span>
       </NavLink>
       <NavLink to="/profile" className="nav__user" aria-label={t('navigation.user')}>
