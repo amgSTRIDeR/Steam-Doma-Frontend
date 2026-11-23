@@ -1,4 +1,4 @@
-import Container from '../Container/Container';
+import Container from '../../components/Container/Container';
 import Navigation from '../Navigation/Navigation';
 
 export default function Header() {

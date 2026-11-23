@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Logo from '../Logo/Logo';
-import Search from '../Search/Search';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
-import Icon from '../Icon/Icon';
+import Logo from '../../components/Logo/Logo';
+import Search from '../../components/Search/Search';
+import ThemeSwitcher from '../../components/ThemeSwitcher/ThemeSwitcher';
+import LanguageSwitcher from '../../components/LanguageSwitcher/LanguageSwitcher';
+import Icon from '../../components/Icon/Icon';
 
 export default function Navigation() {
   const { t } = useTranslation();

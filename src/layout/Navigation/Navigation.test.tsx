@@ -5,7 +5,7 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { ThemeProvider } from '../../provider/ThemeProvider';
 import Navigation from './Navigation';
-import Search from '../Search/Search';
+import Search from '../../components/Search/Search';
 
 function renderNavigation(initialEntry = '/') {
   return render(
