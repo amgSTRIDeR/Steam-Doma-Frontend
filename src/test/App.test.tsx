@@ -11,6 +11,6 @@ describe('App', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole('navigation')).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Main navigation' })).toBeInTheDocument();
   });
 });
