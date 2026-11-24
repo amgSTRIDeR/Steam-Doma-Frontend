@@ -19,7 +19,7 @@
   },
   "genres": {
     "action": "Action",
-    "RPG": "RPG",
+    "rpg": "RPG",
     "adventures": "Adventures",
     "strategy": "Strategy",
     "indie": "Indie",

@@ -19,7 +19,7 @@
   },
   "genres": {
     "action": "Экшен",
-    "RPG": "RPG",
+    "rpg": "RPG",
     "adventures": "Приключения",
     "strategy": "Cтратегия",
     "indie": "Инди",
