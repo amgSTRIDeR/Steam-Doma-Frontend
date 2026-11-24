@@ -8,6 +8,8 @@
 @use './components/ThemeSwitcher/themeSwitcher';
 @use './components/LanguageSwitcher/languageSwitcher';
 @use './layout//Sidebar/sidebar';
+@use './components/List/list';
+@use './pages/About/about';
 
 @include sd.foundation();
 

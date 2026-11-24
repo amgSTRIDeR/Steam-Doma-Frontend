@@ -78,6 +78,20 @@ $sd-colors-dark: (
   @return map.get($colors, $token);
 }
 
+[data-theme='dark'] {
+  --header-gradient-bg: linear-gradient(to right, #061523, #0b2037, #071626);
+  --list-gradient-bg: linear-gradient(135deg, #10233b, #152d49);
+  --sidebar-gradient-bg: linear-gradient(135deg, #071625, #0b1d31);
+  --about-header-gradient-bg: linear-gradient(to right, #061523 50%, transparent);
+}
+
+[data-theme='light'] {
+  --header-gradient-bg: linear-gradient(to right, #f8fbff, #ffffff);
+  --list-gradient-bg: linear-gradient(135deg, #eaf0f8, #f8fbff);
+  --sidebar-gradient-bg: linear-gradient(135deg, #f8fbff, #ffffff);
+  --about-header-gradient-bg: linear-gradient(to right, #f8fbff 50%, transparent);
+}
+
 // =============================================================================
 // 2. SPACING / RADII / VIEWPORT REFERENCE SIZES — FIGMA v6
 // =============================================================================

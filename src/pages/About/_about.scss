@@ -1,0 +1,116 @@
+@use '../../styles/variables' as sd;
+
+.about {
+  width: 100%;
+  max-width: calc(100vw - 200px);
+  padding: sd.space(32);
+
+  &__header,
+  &__footer {
+    //background: sd.color(raised);
+    background: var(--list-gradient-bg);
+    border: 1px solid sd.color(navBorder);
+    border-radius: sd.radius(lg);
+    padding: sd.space(16) sd.space(24);
+    margin-bottom: sd.space(24);
+  }
+
+  &__header {
+    background:
+      var(--about-header-gradient-bg),
+      url(../../assets/images/about-header.png) no-repeat top right / auto 100%;
+  }
+
+  &__title {
+    font-family: sd.$sd-font-family;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: sd.space(24);
+  }
+
+  &__description {
+    max-width: 445px;
+  }
+
+  &__section-title {
+    font-family: sd.$sd-font-family;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: sd.space(16);
+  }
+
+  &__list-goals {
+    .list__item {
+      max-width: 440px;
+    }
+
+    .list__item-img {
+      width: sd.space(64);
+      height: sd.space(64);
+      border-radius: sd.radius(md);
+      background: sd.color(navBorder);
+    }
+  }
+
+  &__list-team {
+    .list__item {
+      width: 45%;
+      max-width: 660px;
+    }
+
+    .list__item-title {
+      margin-bottom: sd.space(10);
+    }
+
+    .list__item-img {
+      flex: 0 0 110px;
+      width: 110px;
+    }
+  }
+
+  &__list-tech {
+    .list__item {
+      align-items: center;
+      padding: sd.space(10) sd.space(16);
+    }
+
+    .list__item-title {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    .list__item-img {
+      flex: 1 0 auto;
+    }
+
+    .list__icon {
+      height: sd.space(20);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: sd.space(24);
+
+    &-title {
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 1.1;
+      margin-bottom: sd.space(4);
+    }
+
+    &-icon {
+      width: sd.space(48);
+      height: sd.space(48);
+    }
+
+    &-link {
+      color: sd.color(sub);
+    }
+  }
+}

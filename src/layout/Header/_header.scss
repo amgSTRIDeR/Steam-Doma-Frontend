@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   color: sd.color(text);
-  background-color: sd.color(nav);
+  background-color: var(--header-gradient-bg); //sd.color(nav);
   padding: sd.space(16) sd.space(24);
   border-bottom: 1px solid sd.color(border);
 }

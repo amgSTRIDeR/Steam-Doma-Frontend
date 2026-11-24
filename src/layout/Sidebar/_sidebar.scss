@@ -3,7 +3,7 @@
 .sidebar {
   height: 100%;
   min-height: 100vh;
-  background: sd.color(nav);
+  background: var(--sidebar-gradient-bg); //sd.color(nav);
   color: sd.color(sub);
   border-right: 1px solid sd.color(border);
   padding: 0 20px;
