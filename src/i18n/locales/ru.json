@@ -15,7 +15,9 @@
   "sidebar": {
     "navTitle": "НАВИГАЦИЯ",
     "genresTitle": "ЖАНРЫ",
-    "accountTitle": "АККАУНТ"
+    "accountTitle": "АККАУНТ",
+    "user": "Профиль",
+    "settings": "Настройки"
   },
   "genres": {
     "action": "Экшен",

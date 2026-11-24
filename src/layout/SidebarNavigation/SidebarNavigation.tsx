@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import NavigationLink from '../../components/NavigationLink/NavigationLink';
-import SidebarGenres from '../Sidebar/SidebarGenres';
-import { genres } from '../../types/genres';
 
 type SidebarLinks = 'home' | 'catalog' | 'cart' | 'about';
 
@@ -30,8 +28,6 @@ export default function SidebarNavigation() {
           ))}
         </ul>
       </nav>
-
-      <SidebarGenres genres={genres} />
     </>
   );
 }

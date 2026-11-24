@@ -11,12 +11,16 @@
   &__title {
     font-family: sd.$sd-font-family;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.2;
     text-transform: uppercase;
     color: sd.color(muted);
     padding-left: sd.space(16);
     margin-bottom: sd.space(16);
+  }
+
+  &__nav {
+    border-bottom: 1px solid sd.color(border);
   }
 
   &__item {

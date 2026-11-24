@@ -15,7 +15,9 @@
   "sidebar": {
     "navTitle": "Navigation",
     "genresTitle": "Genres",
-    "accountTitle": "Account"
+    "accountTitle": "Account",
+    "user": "Profile",
+    "settings": "Settings"
   },
   "genres": {
     "action": "Action",
