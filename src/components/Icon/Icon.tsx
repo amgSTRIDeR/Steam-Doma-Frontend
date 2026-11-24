@@ -62,7 +62,17 @@ export type IconName =
   | 'icon-discount'
   | 'icon-genre'
   | 'icon-shopping-bag'
-  | 'icon-about';
+  | 'icon-about'
+  | 'icon-ui'
+  | 'icon-react'
+  | 'icon-ts'
+  | 'icon-vite'
+  | 'icon-mui'
+  | 'icon-scss'
+  | 'icon-graphql'
+  | 'icon-python'
+  | 'icon-postgres'
+  | 'icon-edu';
 
 interface IconProps {
   name: IconName;
