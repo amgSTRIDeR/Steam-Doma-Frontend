@@ -3,9 +3,10 @@
 .sidebar {
   height: 100%;
   min-height: 100vh;
-  padding: 30px 20px;
-  border-right: 1px solid sd.color(border);
   background: sd.color(nav);
+  color: sd.color(sub);
+  border-right: 1px solid sd.color(border);
+  padding: 0 20px;
 
   &__title {
     font-family: sd.$sd-font-family;
@@ -16,6 +17,39 @@
     color: sd.color(muted);
     padding-left: sd.space(16);
     margin-bottom: sd.space(16);
+  }
+
+  &__item {
+    padding: 20px 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid sd.color(border);
+    }
+  }
+
+  &__list-item {
+    font-family: sd.$sd-font-family;
+  }
+
+  &__list-btn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: sd.space(10);
+    color: sd.color(sub);
+    padding: sd.space(12) sd.space(16);
+    border-radius: sd.radius(sm);
+    transition: 0.4s ease-in;
+
+    &:hover {
+      background-color: sd.color(soft);
+    }
+  }
+
+  &__span {
+    grid-column: 2 / 3;
+    justify-self: start;
   }
 
   &__link {
@@ -29,5 +63,35 @@
   &__icon {
     width: 14px;
     height: 14px;
+
+    &_expanded {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__sublist {
+    padding: 0;
+    margin-left: 32px;
+    list-style: none;
+  }
+
+  &__subitem {
+  }
+
+  &__subbutton {
+    width: 100%;
+    font-size: 13px;
+    padding: sd.space(4) sd.space(12);
+    border: none;
+    border-radius: sd.radius(sm);
+    background: transparent;
+    color: sd.color(sub);
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: sd.color(text);
+      background-color: sd.color(soft);
+    }
   }
 }

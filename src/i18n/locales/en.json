@@ -13,6 +13,16 @@
     "placeholder": "Search games..."
   },
   "sidebar": {
-    "title": "Navigation"
+    "navTitle": "Navigation",
+    "genresTitle": "Genres",
+    "accountTitle": "Account"
+  },
+  "genres": {
+    "action": "Action",
+    "RPG": "RPG",
+    "adventures": "Adventures",
+    "strategy": "Strategy",
+    "indie": "Indie",
+    "simulation": "Simulation"
   }
 }

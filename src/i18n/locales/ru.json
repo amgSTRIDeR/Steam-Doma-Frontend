@@ -13,6 +13,16 @@
     "placeholder": "Поиск по играм..."
   },
   "sidebar": {
-    "title": "НАВИГАЦИЯ"
+    "navTitle": "НАВИГАЦИЯ",
+    "genresTitle": "ЖАНРЫ",
+    "accountTitle": "АККАУНТ"
+  },
+  "genres": {
+    "action": "Экшен",
+    "RPG": "RPG",
+    "adventures": "Приключения",
+    "strategy": "Cтратегия",
+    "indie": "Инди",
+    "simulation": "Симуляторы"
   }
 }

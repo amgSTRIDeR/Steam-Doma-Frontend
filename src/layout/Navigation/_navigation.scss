@@ -15,21 +15,23 @@
     display: block;
     display: flex;
     align-items: center;
-    gap: sd.space(24);
-    font-family: sd.$sd-font-family;
-    padding: sd.space(12) sd.space(16);
+    gap: sd.space(16);
     font-family: sd.$sd-font-family;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.2;
     color: sd.color(sub);
-    padding: 12px 16px;
+    padding: sd.space(12) sd.space(16);
     border-radius: sd.radius(sm);
     transition: 0.5s ease-in;
 
     &_active {
       background: sd.color(activeLink);
+    }
+
+    &:hover {
+      background-color: sd.color(soft);
     }
   }
 
