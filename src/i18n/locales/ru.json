@@ -23,6 +23,14 @@
     "adventures": "Приключения",
     "strategy": "Cтратегия",
     "indie": "Инди",
-    "simulation": "Симуляторы"
+    "simulation": "Симуляторы",
+    "shooters": "Шутеры",
+    "fighting": "Файтинг",
+    "beat-em-up": "Beat-em-up",
+    "rts": "RTS",
+    "turnBased": "Пошаговые",
+    "jrpg": "JRPG",
+    "action-rpg": "Action RPG",
+    "crpg": "CRPG"
   }
 }

@@ -24,7 +24,10 @@ export default function SidebarGenres({ genres }: SidebarGenresProps) {
           const hasSubgenres = Boolean(genre.subgenres?.length);
 
           return (
-            <li className="sidebar__list-item" key={genre.name}>
+            <li
+              className={`sidebar__list-item ${isExpanded ? 'sidebar__list-item_active' : ''}`}
+              key={genre.name}
+            >
               <button
                 className="sidebar__list-btn"
                 type="button"
@@ -46,7 +49,7 @@ export default function SidebarGenres({ genres }: SidebarGenresProps) {
                   {genre.subgenres?.map((subgenre) => (
                     <li className="sidebar__subitem" key={subgenre}>
                       <button className="sidebar__subbutton" type="button">
-                        {subgenre}
+                        {t(`genres.${subgenre}`)}
                       </button>
                     </li>
                   ))}

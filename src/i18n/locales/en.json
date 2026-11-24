@@ -23,6 +23,14 @@
     "adventures": "Adventures",
     "strategy": "Strategy",
     "indie": "Indie",
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "shooters": "Shooters",
+    "fighting": "Fighting",
+    "beat-em-up": "Beat-em-up",
+    "rts": "RTS",
+    "turnBased": "Turn-Based",
+    "jrpg": "JRPG",
+    "action-rpg": "Action RPG",
+    "crpg": "CRPG"
   }
 }

@@ -29,6 +29,10 @@
 
   &__list-item {
     font-family: sd.$sd-font-family;
+
+    &_active {
+      background: sd.color(soft);
+    }
   }
 
   &__list-btn {
@@ -70,9 +74,10 @@
   }
 
   &__sublist {
-    padding: 0;
     margin-left: 32px;
     list-style: none;
+    border-radius: sd.radius(sm);
+    padding: 0 0 sd.space(10);
   }
 
   &__subitem {
@@ -81,7 +86,7 @@
   &__subbutton {
     width: 100%;
     font-size: 13px;
-    padding: sd.space(4) sd.space(12);
+    padding: 0 sd.space(12);
     border: none;
     border-radius: sd.radius(sm);
     background: transparent;

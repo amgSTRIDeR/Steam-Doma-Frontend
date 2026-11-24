@@ -6,18 +6,18 @@ export interface Genre {
 export const genres: Genre[] = [
   {
     name: 'action',
-    subgenres: ['Шутеры', 'Файтинг', 'Beat-em-up'],
+    subgenres: ['shooters', 'fighting', 'beat-em-up'],
   },
   {
     name: 'RPG',
-    subgenres: ['JRPG', 'Action RPG', 'CRPG'],
+    subgenres: ['jrpg', 'action-rpg', 'crpg'],
   },
   {
     name: 'adventures',
   },
   {
     name: 'strategy',
-    subgenres: ['RTS', 'Пошаговые'],
+    subgenres: ['rts', 'turnBased'],
   },
   {
     name: 'indie',
