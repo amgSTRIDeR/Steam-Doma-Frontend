@@ -7,7 +7,6 @@
 
   &__header,
   &__footer {
-    //background: sd.color(raised);
     background: var(--list-gradient-bg);
     border: 1px solid sd.color(navBorder);
     border-radius: sd.radius(lg);
@@ -50,7 +49,7 @@
       width: sd.space(64);
       height: sd.space(64);
       border-radius: sd.radius(md);
-      background: sd.color(navBorder);
+      background: sd.color(activeLink);
     }
   }
 
@@ -67,6 +66,20 @@
     .list__item-img {
       flex: 0 0 110px;
       width: 110px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: sd.color(navBorder);
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        border-radius: sd.radius(lg);
+        z-index: -1;
+      }
     }
   }
 

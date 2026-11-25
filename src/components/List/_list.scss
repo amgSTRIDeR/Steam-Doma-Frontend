@@ -9,7 +9,6 @@
   &__item {
     display: flex;
     gap: sd.space(24);
-    //background: sd.color(raised);
     background: var(--list-gradient-bg);
     border: 1px solid sd.color(navBorder);
     border-radius: sd.radius(lg);
@@ -28,7 +27,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: sd.radius(md);
+      border-radius: sd.radius(lg);
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
