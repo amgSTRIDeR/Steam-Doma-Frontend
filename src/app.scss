@@ -11,6 +11,7 @@
 @use './layout//Sidebar/sidebar';
 @use './components/List/list';
 @use './pages/About/about';
+@use './pages/Legal/legal';
 
 @include sd.foundation();
 
