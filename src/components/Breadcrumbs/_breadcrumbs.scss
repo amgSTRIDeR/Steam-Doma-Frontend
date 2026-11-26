@@ -1,0 +1,36 @@
+@use '../../styles/variables' as sd;
+
+.breadcrumbs {
+  margin-bottom: sd.space(16);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: sd.color(logo);
+  }
+
+  &__link,
+  &__item {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      color: sd.color(logoHover);
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 20px;
+  }
+}

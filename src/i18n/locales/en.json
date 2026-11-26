@@ -36,6 +36,8 @@
     "crpg": "CRPG"
   },
   "about": {
+    "breadcrumbsLink1": "Home",
+    "breadcrumbsLink2": "About",
     "aboutTitle": "About us",
     "aboutDescription": "Steam Home is an educational team project of the game store, inspired by Steam. The application provides a catalog of games, search and filtering, a shopping cart and admin tools.",
     "heading1": "Our Goal",

@@ -20,6 +20,10 @@
       url(../../assets/images/about-header.png) no-repeat top right / auto 100%;
   }
 
+  &__breadcrumbs {
+    display: flex;
+  }
+
   &__title {
     font-family: sd.$sd-font-family;
     font-weight: 700;

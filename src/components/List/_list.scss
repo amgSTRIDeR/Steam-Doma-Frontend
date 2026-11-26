@@ -22,8 +22,13 @@
       margin-bottom: sd.space(20);
     }
 
+    &-content {
+      width: 205px;
+    }
+
     &-img {
-      flex: 1 0 sd.space(64);
+      width: 110px;
+      height: 110px;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Container from '../../components/Container/Container';
 import List from '../../components/List/List';
 import Icon from '../../components/Icon/Icon';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { GOALS_DATA, TEAM_DATA, TECH_STACK_DATA } from './aboutData';
 
 export default function About() {
@@ -12,6 +13,7 @@ export default function About() {
     <div className="about">
       <Container>
         <header className="about__header">
+          <Breadcrumbs />
           <h1 className="about__title">{t('about.aboutTitle')}</h1>
           <div className="about__description">{t('about.aboutDescription')}</div>
         </header>
