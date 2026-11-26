@@ -72,7 +72,12 @@ export type IconName =
   | 'icon-graphql'
   | 'icon-python'
   | 'icon-postgres'
-  | 'icon-edu';
+  | 'icon-edu'
+  | 'icon-footer-globe'
+  | 'icon-footer-shield'
+  | 'icon-footer-info'
+  | 'icon-footer-mail'
+  | 'icon-footer-database';
 
 interface IconProps {
   name: IconName;
