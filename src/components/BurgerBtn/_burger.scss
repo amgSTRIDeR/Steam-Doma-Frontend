@@ -1,0 +1,46 @@
+@use '../../styles/variables' as sd;
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  width: 40px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  @media (max-width: sd.breakpoints(smallDesktop)) {
+    display: flex;
+  }
+
+  &__line {
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: sd.color(sub);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  &_active {
+    .burger__line {
+      &:first-child {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}

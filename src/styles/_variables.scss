@@ -127,6 +127,7 @@ $sd-radius: (
 $sd-breakpoints: (
   mobile: 390px,
   tablet: 768px,
+  smallDesktop: 1100px,
   desktop: 1440px,
 ) !default;
 // Note: mobile 390px and desktop 1440px are Figma frame reference widths.
@@ -146,6 +147,10 @@ $sd-mui-spacing-unit: 4px !default; // Matches createTheme({ spacing: 4 })
     @error "Unknown radius key: #{$size}";
   }
   @return map.get($sd-radius, $size);
+}
+
+@function breakpoints($key) {
+  @return map.get($sd-breakpoints, $key);
 }
 
 @mixin up($size) {

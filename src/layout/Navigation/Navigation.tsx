@@ -1,15 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import Logo from '../../components/Logo/Logo';
 import Search from '../../components/Search/Search';
 import ThemeSwitcher from '../../components/ThemeSwitcher/ThemeSwitcher';
 import LanguageSwitcher from '../../components/LanguageSwitcher/LanguageSwitcher';
 import Icon from '../../components/Icon/Icon';
 import NavigationLink from '../../components/NavigationLink/NavigationLink';
+import BurgerButton from '../../components/BurgerBtn/BurgerBtn';
 
 type HeaderLinks = 'home' | 'catalog' | 'about';
 
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { t } = useTranslation();
   const links: HeaderLinks[] = ['about', 'home', 'catalog'];
   const paths: Record<HeaderLinks, string> = {
@@ -20,6 +24,7 @@ export default function Navigation() {
 
   return (
     <nav aria-label="Main navigation" className="nav">
+      <BurgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen((prev) => !prev)} />
       <Logo />
       <ul className="nav__list">
         {links.map((link) => (

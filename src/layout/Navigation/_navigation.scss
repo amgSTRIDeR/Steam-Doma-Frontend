@@ -2,13 +2,23 @@
 
 .nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
+
+  @media (max-width: sd.breakpoints(smallDesktop)) {
+    gap: 20px;
+  }
 
   &__list {
     display: flex;
     align-items: center;
+    flex-grow: 1;
     margin-right: auto;
+  }
+
+  &__item {
+    flex: 1 0 auto;
   }
 
   &__link {

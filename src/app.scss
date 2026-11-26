@@ -3,6 +3,7 @@
 @use './layout/Header/header';
 @use './components/Container/container';
 @use './layout/Navigation/navigation';
+@use './components/BurgerBtn/burger';
 @use './components/Logo/logo';
 @use './components/Search/search';
 @use './components/ThemeSwitcher/themeSwitcher';
