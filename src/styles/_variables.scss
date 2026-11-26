@@ -127,6 +127,7 @@ $sd-radius: (
 $sd-breakpoints: (
   mobile: 390px,
   tablet: 768px,
+  burger: 864px,
   smallDesktop: 1100px,
   desktop: 1440px,
 ) !default;
@@ -410,6 +411,10 @@ $sd-elevation-dark: (
     transition:
       background-color map.get($sd-components, transition-normal) ease,
       color map.get($sd-components, transition-normal) ease;
+
+    &_locked {
+      overflow-y: hidden;
+    }
   }
   a {
     text-decoration: none;

@@ -1,9 +1,6 @@
 @use '../../styles/variables' as sd;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: sd.color(text);
   background: var(--header-gradient-bg);
   padding: sd.space(16) sd.space(24);

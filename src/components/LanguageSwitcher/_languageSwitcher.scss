@@ -4,16 +4,31 @@
   color: sd.color(text);
   position: relative;
 
+  @media (max-width: sd.breakpoints(tablet)) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    color: sd.color(sub);
+  }
+
   &__trigger {
     display: flex;
     align-items: center;
     gap: sd.space(10);
     padding: 10px 5px;
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      color: sd.color(sub);
+    }
   }
 
   &__icon {
     width: 15px;
     height: 15px;
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__text {
@@ -21,11 +36,20 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      font-size: 14px;
+    }
   }
 
   &__down {
     width: 10px;
     height: 5px;
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      width: 15px;
+      height: 10px;
+    }
   }
 
   &__list {
@@ -34,11 +58,23 @@
     left: 0;
     font-size: 14px;
     height: 0;
+    color: inherit;
     padding: 0 5px 10px;
     overflow: hidden;
     animation: open 0.5s forwards;
     transition: height ease-in;
     background: sd.color(headerBg);
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      color: inherit; //sd.color(sub);
+      background: inherit;
+    }
+
+    button {
+      @media (max-width: sd.breakpoints(tablet)) {
+        color: inherit;
+      }
+    }
   }
 }
 

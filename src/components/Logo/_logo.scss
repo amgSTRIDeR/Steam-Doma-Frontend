@@ -5,6 +5,15 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  flex-basis: 178px;
+
+  @media (max-width: sd.breakpoints(smallDesktop)) {
+    gap: 5px;
+  }
+
+  @media (max-width: sd.breakpoints(tablet)) {
+    margin-right: auto;
+  }
 
   &__icon {
     width: sd.space(32);
