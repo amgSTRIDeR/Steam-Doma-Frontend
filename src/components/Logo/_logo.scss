@@ -4,12 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 
   &__icon {
-    width: sd.component(icon-size-lg);
-    height: sd.component(icon-size-sm);
-    color: sd.color(primary);
+    width: sd.space(32);
+    height: sd.space(32);
+    color: sd.color(logo);
+    transition: 0.3s;
+
+    &:hover {
+    }
   }
 
   &__title {
@@ -18,5 +22,16 @@
     font-size: 23px;
     line-height: 1.2;
     color: sd.color(logoTitle);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .logo__icon {
+      color: sd.color(logoHover);
+    }
+
+    .logo__title {
+      color: sd.color(logoTitleHover);
+    }
   }
 }
