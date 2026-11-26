@@ -28,21 +28,123 @@ export default function About() {
           <List data={TECH_STACK_DATA} className="about__list-tech" isIcon />
         </section>
         <footer className="about__footer">
-          <Icon name="icon-edu" className="about__footer-icon" />
-          <div className="about__footer-content">
-            <h3 className="about__footer-title">{t('footer.title')}</h3>
-            <p>
-              {`${t('footer.description')} `}
-              <Link
-                to="https://rs.school/"
-                className="about__footer-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RS School
-              </Link>
-            </p>
+          <div className="about__footer-education">
+            <Icon name="icon-edu" className="about__footer-icon" />
+            <div>
+              <h3 className="about__footer-title">{t('footer.title')}</h3>
+              <p>
+                {`${t('footer.description')} `}
+                <a
+                  href="https://rs.school/"
+                  className="about__footer-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  RS School
+                </a>
+              </p>
+            </div>
           </div>
+
+          <div className="about__footer-details">
+            <div className="about__footer-detail">
+              <Icon name="icon-footer-globe" className="about__footer-detail-icon" />
+              <div>
+                <h3 className="about__footer-title">{t('footer.sourceTitle')}</h3>
+                <p>
+                  <a
+                    href="https://github.com/amgSTRIDeR/Steam-Doma-Frontend"
+                    className="about__footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('footer.frontendTitle')}
+                  </a>
+                  {' · '}
+                  <a
+                    href="https://github.com/amgSTRIDeR/Steam-Doma-Backend"
+                    className="about__footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('footer.backendTitle')}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="about__footer-detail">
+              <Icon name="icon-footer-shield" className="about__footer-detail-icon" />
+              <div>
+                <h3 className="about__footer-title">{t('footer.privacyTitle')}</h3>
+                <p>
+                  {t('footer.privacyDescription')}{' '}
+                  <Link className="about__footer-link" to="/legal">
+                    {t('footer.readPrivacy')}
+                  </Link>
+                </p>
+              </div>
+            </div>
+
+            <div className="about__footer-detail">
+              <Icon name="icon-footer-database" className="about__footer-detail-icon" />
+              <div>
+                <h3 className="about__footer-title">{t('footer.dataSourcesTitle')}</h3>
+                <p>
+                  {t('footer.dataSourcesDescription')}{' '}
+                  <a
+                    href="https://github.com/vintagedon/steam-dataset-2025"
+                    className="about__footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Steam Dataset 2025
+                  </a>{' '}
+                  {t('footer.dataSourcesBy')}{' '}
+                  <a
+                    href="https://github.com/vintagedon"
+                    className="about__footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Donald Fountain (VintageDon)
+                  </a>
+                  {', '}
+                  {t('footer.dataSourcesLicense')}{' '}
+                  <a
+                    href="https://creativecommons.org/licenses/by/4.0/"
+                    className="about__footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Creative Commons Attribution 4.0 International (CC BY 4.0)
+                  </a>
+                  .
+                </p>
+                <p>{t('footer.dataSourcesAdapted')}</p>
+                <p>{t('footer.dataSourcesRights')}</p>
+              </div>
+            </div>
+
+            <div className="about__footer-detail">
+              <Icon name="icon-footer-info" className="about__footer-detail-icon" />
+              <div>
+                <h3 className="about__footer-title">{t('footer.disclaimerTitle')}</h3>
+                <p>{t('footer.disclaimerDescription')}</p>
+              </div>
+            </div>
+
+            <div className="about__footer-detail">
+              <Icon name="icon-footer-mail" className="about__footer-detail-icon" />
+              <div>
+                <h3 className="about__footer-title">{t('footer.contactTitle')}</h3>
+                <a className="about__footer-link" href="mailto:alex.ovchinnikov.dev@gmail.com">
+                  alex.ovchinnikov.dev@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="about__footer-copyright">© 2026 {t('footer.copyright')}</p>
         </footer>
       </Container>
     </div>
