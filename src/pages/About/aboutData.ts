@@ -7,41 +7,41 @@ export interface ListItemData {
 export const GOALS_DATA: ListItemData[] = [
   {
     id: 'catalog',
-    title: 'Каталог игр',
-    text: 'Удобный просмотр игр с подборками, категориями и подробными страницами.',
+    title: 'about.goalHeading1',
+    text: 'about.goalDescription1',
   },
   {
     id: 'search',
-    title: 'Удобный поиск',
-    text: 'Быстрый поиск по названию, фильтры и сортировка для комфортного выбора.',
+    title: 'about.goalHeading2',
+    text: 'about.goalDescription1',
   },
   {
     id: 'ui',
-    title: 'Современный интерфейс',
-    text: 'Единый стиль, адаптивные экраны и удобный пользовательский опыт.',
+    title: 'about.goalHeading3',
+    text: 'about.goalDescription1',
   },
 ];
 
 export const TEAM_DATA: ListItemData[] = [
   {
     id: 'aleksei',
-    title: 'Aleksei Ovchinnikov',
-    text: 'Настройка frontend-инфраструктуры, архитектура проекта, интеграция интерфейса.',
+    title: 'about.teamHeading1',
+    text: 'about.teamDescription1',
   },
   {
     id: 'nataliya',
-    title: 'Nataliya Krylova',
-    text: 'UI/UX, дизайн-система, проработка экранов и пользовательского опыта.',
+    title: 'about.teamHeading2',
+    text: 'about.teamDescription2',
   },
 ];
 
 export const TECH_STACK_DATA: ListItemData[] = [
-  { id: 'react', title: 'React' },
-  { id: 'ts', title: 'TypeScript' },
-  { id: 'vite', title: 'Vite' },
-  { id: 'mui', title: 'Material UI' },
-  { id: 'scss', title: 'SCSS' },
-  { id: 'graphql', title: 'GraphQL' },
-  { id: 'python', title: 'Python' },
-  { id: 'postgres', title: 'PostgreSQL' },
+  { id: 'react', title: 'about.techTitle1' },
+  { id: 'ts', title: 'about.techTitle2' },
+  { id: 'vite', title: 'about.techTitle3' },
+  { id: 'mui', title: 'about.techTitle4' },
+  { id: 'scss', title: 'about.techTitle5' },
+  { id: 'graphql', title: 'about.techTitle6' },
+  { id: 'python', title: 'about.techTitle7' },
+  { id: 'postgres', title: 'about.techTitle8' },
 ];

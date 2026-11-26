@@ -34,5 +34,34 @@
     "jrpg": "JRPG",
     "action-rpg": "Action RPG",
     "crpg": "CRPG"
+  },
+  "about": {
+    "aboutTitle": "О нас",
+    "aboutDescription": "Steam Дома — учебный командный проект игрового магазина, вдохновлённый Steam. Приложение представляет каталог игр, поиск и фильтрацию, корзину и инструменты администратора.",
+    "heading1": "Наша цель",
+    "goalHeading1": "Каталог игр",
+    "goalDescription1": "Удобный просмотр игр с подборками, категориями и подробными страницами.",
+    "goalHeading2": "Удобный поиск",
+    "goalDescription2": "Быстрый поиск по названию, фильтры и сортировка для комфортного выбора.",
+    "goalHeading3": "Современный интерфейс",
+    "goalDescription3": "Единый стиль, адаптивные экраны и удобный пользовательский опыт.",
+    "heading2": "Команда",
+    "teamHeading1": "Алексей Овчинников",
+    "teamDescription1": "Настройка frontend-инфраструктуры, архитектура проекта, интеграция интерфейса.",
+    "teamHeading2": "Наталия Крылова",
+    "teamDescription2": "UI/UX, дизайн-система, проработка экранов и пользовательского опыта.",
+    "heading3": "Технологии",
+    "techTitle1": "React",
+    "techTitle2": "Typescript",
+    "techTitle3": "Vite",
+    "techTitle4": "Material UI",
+    "techTitle5": "SCSS",
+    "techTitle6": "GraphQL",
+    "techTitle7": "Python",
+    "techTitle8": "PostgreSQL"
+  },
+  "footer": {
+    "title": "Учебный проект RS School",
+    "description": "Этот проект разработан в рамках обучения в"
   }
 }
