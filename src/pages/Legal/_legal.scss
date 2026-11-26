@@ -1,0 +1,75 @@
+@use '../../styles/variables' as sd;
+
+.legal {
+  width: 100%;
+  max-width: calc(100vw - 200px);
+  padding: sd.space(32);
+
+  &__article {
+    background: var(--list-gradient-bg);
+    border: 1px solid sd.color(navBorder);
+    border-radius: sd.radius(lg);
+    padding: sd.space(24) sd.space(32);
+  }
+
+  &__header {
+    padding-bottom: sd.space(16);
+    margin-bottom: sd.space(16);
+    border-bottom: 1px solid sd.color(navBorder);
+  }
+
+  &__title {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: sd.space(16);
+  }
+
+  &__header p {
+    margin-bottom: sd.space(4);
+  }
+
+  &__link {
+    color: sd.color(primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }
+
+  &__section {
+    margin-bottom: sd.space(24);
+
+    h2 {
+      font-size: 25px;
+      line-height: 1.2;
+      margin-bottom: sd.space(12);
+    }
+
+    p {
+      margin-bottom: sd.space(8);
+    }
+
+    ul {
+      padding-left: sd.space(24);
+      margin: sd.space(8) 0;
+    }
+
+    li {
+      margin-bottom: sd.space(4);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .legal {
+    max-width: 100%;
+    padding: sd.space(16);
+
+    &__article {
+      padding: sd.space(16);
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

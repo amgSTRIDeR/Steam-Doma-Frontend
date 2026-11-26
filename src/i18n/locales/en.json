@@ -62,6 +62,69 @@
   },
   "footer": {
     "title": "RS School Educational Project",
-    "description": "This project was developed as part of the training in"
+    "description": "This project was developed as part of the training in",
+    "sourceTitle": "Source Code",
+    "frontendTitle": "Frontend Repository",
+    "frontendDescription": "Web application",
+    "backendTitle": "Backend Repository",
+    "backendDescription": "API and server-side application",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Information about technical data, cloud hosting, browser storage, and your privacy rights.",
+    "readPrivacy": "Read Privacy Policy",
+    "disclaimerTitle": "Legal Disclaimer",
+    "disclaimerDescription": "This project is not affiliated with, endorsed by, or sponsored by Valve Corporation or Steam.",
+    "contactTitle": "Contact Us",
+    "dataSourcesTitle": "Data Sources",
+    "dataSourcesDescription": "Game catalog data is derived from",
+    "dataSourcesBy": "by",
+    "dataSourcesLicense": "licensed under",
+    "dataSourcesAdapted": "The data has been adapted for use in this application.",
+    "dataSourcesRights": "All third-party game titles, trademarks, and artwork belong to their respective rights holders.",
+    "copyright": "Steam Doma Contributors."
+  },
+  "legal": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective date: November 26, 2026",
+    "sections": {
+      "controller": {
+        "title": "Data Controller",
+        "paragraphs": [
+          "Aleksei Ovchinnikov",
+          "Ituzaingo 1537, Montevideo, Uruguay",
+          "Email: alex.ovchinnikov.dev@gmail.com"
+        ]
+      },
+      "processing": {
+        "title": "Data Processing",
+        "paragraphs": [
+          "Steam Doma does not require user registration or use analytics or advertising tracking.",
+          "Technical information, including IP addresses, may be processed by our hosting provider to deliver and secure the website.",
+          "If you contact us by email, your email address and message are processed to respond to your inquiry and retained only for as long as necessary for that purpose or to comply with legal obligations.",
+          "Providing information by email is voluntary."
+        ]
+      },
+      "hosting": {
+        "title": "Hosting",
+        "paragraphs": [
+          "The application is hosted on Microsoft Azure in the Brazil South region, Brazil.",
+          "Microsoft may process technical information necessary to provide cloud hosting services. Hosting-related processing is subject to the applicable Microsoft Data Protection Addendum."
+        ]
+      },
+      "storage": {
+        "title": "Cookies and Local Storage",
+        "paragraphs": [
+          "Cookies and local storage are used exclusively to remember your selected language and interface theme.",
+          "You can remove these preferences through your browser settings."
+        ]
+      },
+      "rights": {
+        "title": "Your Rights",
+        "paragraphs": [
+          "Under applicable data protection legislation, you may request access, correction, deletion, or portability of your personal data, restrict or object to its processing, and withdraw consent where applicable.",
+          "To exercise your rights, contact alex.ovchinnikov.dev@gmail.com.",
+          "You may also lodge a complaint with Uruguay's Unidad Reguladora y de Control de Datos Personales (URCDP)."
+        ]
+      }
+    }
   }
 }
