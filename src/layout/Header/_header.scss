@@ -1,0 +1,8 @@
+@use '../../styles/variables' as sd;
+
+.header {
+  color: sd.color(text);
+  background: var(--header-gradient-bg);
+  padding: sd.space(16) sd.space(24);
+  border-bottom: 1px solid sd.color(border);
+}

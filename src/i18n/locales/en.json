@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "about": "About",
+    "home": "Home",
+    "shop": "Shop",
+    "catalog": "Catalog",
+    "toCart": "Go to Cart",
+    "user": "Go to your account",
+    "cart": "Cart"
+  },
+  "search": {
+    "label": "Enter game title",
+    "placeholder": "Search games..."
+  },
+  "sidebar": {
+    "navTitle": "Navigation",
+    "genresTitle": "Genres",
+    "accountTitle": "Account",
+    "user": "Profile",
+    "settings": "Settings"
+  },
+  "genres": {
+    "action": "Action",
+    "rpg": "RPG",
+    "adventures": "Adventures",
+    "strategy": "Strategy",
+    "indie": "Indie",
+    "simulation": "Simulation",
+    "shooters": "Shooters",
+    "fighting": "Fighting",
+    "beat-em-up": "Beat-em-up",
+    "rts": "RTS",
+    "turnBased": "Turn-Based",
+    "jrpg": "JRPG",
+    "action-rpg": "Action RPG",
+    "crpg": "CRPG"
+  },
+  "about": {
+    "aboutTitle": "About us",
+    "aboutDescription": "Steam Home is an educational team project of the game store, inspired by Steam. The application provides a catalog of games, search and filtering, a shopping cart and admin tools.",
+    "heading1": "Our Goal",
+    "goalHeading1": "Game's Catalog",
+    "goalDescription1": "Easy viewing of games with collections, categories and detailed pages.",
+    "goalHeading2": "Convenient search",
+    "goalDescription2": "Quick search by name, filters and sorting for a comfortable selection.",
+    "goalHeading3": "Modern interface",
+    "goalDescription3": "Unified style, responsive screens and user-friendly experience.",
+    "heading2": "Team",
+    "teamHeading1": "Aleksei Ovchinnikov",
+    "teamDescription1": "Frontend infrastructure setup, project architecture, interface integration.",
+    "teamHeading2": "Nataliya Krylova",
+    "teamDescription2": "UI/UX, design system, screen design and user experience.",
+    "heading3": "Technologies",
+    "techTitle1": "React",
+    "techTitle2": "Typescript",
+    "techTitle3": "Vite",
+    "techTitle4": "Material UI",
+    "techTitle5": "SCSS",
+    "techTitle6": "GraphQL",
+    "techTitle7": "Python",
+    "techTitle8": "PostgreSQL"
+  },
+  "footer": {
+    "title": "RS School Educational Project",
+    "description": "This project was developed as part of the training in"
+  }
+}

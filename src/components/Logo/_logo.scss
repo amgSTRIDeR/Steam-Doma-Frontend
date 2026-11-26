@@ -1,0 +1,46 @@
+@use '../../styles/variables' as sd;
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-basis: 178px;
+
+  @media (max-width: sd.breakpoints(smallDesktop)) {
+    gap: 5px;
+  }
+
+  @media (max-width: sd.breakpoints(tablet)) {
+    margin-right: auto;
+  }
+
+  &__icon {
+    width: sd.space(32);
+    height: sd.space(32);
+    color: sd.color(logo);
+    transition: 0.3s;
+
+    &:hover {
+    }
+  }
+
+  &__title {
+    font-family: sd.$sd-font-family;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2;
+    color: sd.color(logoTitle);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .logo__icon {
+      color: sd.color(logoHover);
+    }
+
+    .logo__title {
+      color: sd.color(logoTitleHover);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../../styles/variables' as sd;
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: sd.space(16);
+  margin: 0 auto sd.space(24);
+
+  &__item {
+    display: flex;
+    gap: sd.space(24);
+    background: var(--list-gradient-bg);
+    border: 1px solid sd.color(navBorder);
+    border-radius: sd.radius(lg);
+    padding: sd.space(16) sd.space(24);
+
+    &-title {
+      font-family: sd.$sd-font-family;
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 1.1;
+      margin-bottom: sd.space(20);
+    }
+
+    &-img {
+      flex: 1 0 sd.space(64);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: sd.radius(lg);
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__icon {
+    width: sd.space(24);
+    height: sd.space(24);
+  }
+}

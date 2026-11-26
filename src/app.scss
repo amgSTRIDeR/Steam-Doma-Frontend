@@ -1,0 +1,28 @@
+@use './styles/variables' as sd;
+
+@use './layout/Header/header';
+@use './components/Container/container';
+@use './layout/Navigation/navigation';
+@use './components/BurgerBtn/burger';
+@use './components/Logo/logo';
+@use './components/Search/search';
+@use './components/ThemeSwitcher/themeSwitcher';
+@use './components/LanguageSwitcher/languageSwitcher';
+@use './layout//Sidebar/sidebar';
+@use './components/List/list';
+@use './pages/About/about';
+
+@include sd.foundation();
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  background-color: sd.color(bg);
+  color: sd.color(text);
+}
