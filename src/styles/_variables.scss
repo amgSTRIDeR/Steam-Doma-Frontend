@@ -437,10 +437,6 @@ $sd-elevation-dark: (
     background: transparent;
     cursor: pointer;
   }
-  main {
-    display: grid;
-    grid-template-columns: auto 1fr;
-  }
 }
 
 @mixin visuallyHidden() {

@@ -16,9 +16,9 @@ export default function SidebarGenres({ genres }: SidebarGenresProps) {
 
   const { t } = useTranslation();
   return (
-    <div className="sidebar__item">
+    <div className="sidebar__item sidebar__genres">
       <h2 className="sidebar__title">{t('sidebar.genresTitle')}</h2>
-      <ul className="sidebar__list">
+      <ul className="sidebar__list sidebar__list_genres">
         {genres.map((genre) => {
           const isExpanded = expandedGenre === genre.name;
           const hasSubgenres = Boolean(genre.subgenres?.length);

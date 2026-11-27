@@ -8,9 +8,11 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <Container>
-        <SidebarNavigation />
-        <SidebarGenres genres={genres} />
-        <SidebarAccount />
+        <div className="sidebar__inner">
+          <SidebarNavigation />
+          <SidebarGenres genres={genres} />
+          <SidebarAccount />
+        </div>
       </Container>
     </aside>
   );

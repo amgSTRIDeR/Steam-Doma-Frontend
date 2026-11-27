@@ -12,9 +12,9 @@ export default function SidebarAccount() {
   };
 
   return (
-    <div className="sidebar__item">
+    <div className="sidebar__item sidebar__account">
       <h2 className="sidebar__title">{t('sidebar.accountTitle')}</h2>
-      <ul className="sidebar__list">
+      <ul className="sidebar__list sidebar__list_account">
         {links.map((link) => (
           <NavigationLink
             text={t(`sidebar.${link}`)}

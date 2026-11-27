@@ -17,7 +17,7 @@ export default function SidebarNavigation() {
     <>
       <nav className="sidebar__item sidebar__nav" aria-label="Sidebar Navigation">
         <h2 className="sidebar__title">{t('sidebar.navTitle')}</h2>
-        <ul className="sidebar__list">
+        <ul className="sidebar__list sidebar__list_nav">
           {links.map((link) => (
             <NavigationLink
               text={t(`navigation.${link}`)}
