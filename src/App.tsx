@@ -8,6 +8,7 @@ import Cart from './pages/Cart/Cart';
 import GameDetails from './pages/GameDetails/GameDetails';
 import Profile from './pages/Profile/Profile';
 import Settings from './pages/Settings/Settings';
+import Legal from './pages/Legal/Legal';
 
 import './app.scss';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/game/:id" element={<GameDetails />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/legal" element={<Legal />} />
         </Route>
       </Routes>
     </ThemeProvider>
