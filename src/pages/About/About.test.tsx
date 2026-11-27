@@ -12,6 +12,6 @@ describe('About', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText('О нас')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /О\sнас/ })).toBeInTheDocument();
   });
 });
