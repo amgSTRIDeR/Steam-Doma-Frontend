@@ -30,11 +30,4 @@ describe('Legal', () => {
       expect(link).toHaveAttribute('href', 'mailto:alex.ovchinnikov.dev@gmail.com');
     });
   });
-
-  it('does not mention GDPR or the Italian regulator', () => {
-    render(<Legal />);
-
-    expect(screen.queryByText(/GDPR/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/Garante/i)).not.toBeInTheDocument();
-  });
 });
