@@ -165,10 +165,12 @@ function FilterSection({
     }
 
     updateVisibleCount(viewport, measure);
-    const observer = new ResizeObserver(() => updateVisibleCount(viewport, measure));
-    observer.observe(viewport);
-    observer.observe(measure);
-    return () => observer.disconnect();
+    if (typeof ResizeObserver !== 'undefined') {
+      const observer = new ResizeObserver(() => updateVisibleCount(viewport, measure));
+      observer.observe(viewport);
+      observer.observe(measure);
+      return () => observer.disconnect();
+    }
   }, [expanded, t, visibleOptions]);
 
   return (
