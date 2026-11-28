@@ -13,12 +13,12 @@ export const GOALS_DATA: ListItemData[] = [
   {
     id: 'search',
     title: 'about.goalHeading2',
-    text: 'about.goalDescription1',
+    text: 'about.goalDescription2',
   },
   {
     id: 'ui',
     title: 'about.goalHeading3',
-    text: 'about.goalDescription1',
+    text: 'about.goalDescription3',
   },
 ];
 

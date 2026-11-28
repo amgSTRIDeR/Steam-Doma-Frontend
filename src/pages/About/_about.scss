@@ -52,7 +52,18 @@
 
   &__list-goals {
     .list__item {
-      max-width: 440px;
+      width: calc(33% - 10px);
+      //min-width: 280px;
+
+      @media (max-width: sd.breakpoints(smallDesktop)) {
+        width: 100%;
+      }
+    }
+
+    .list__item-content {
+      @media (max-width: sd.breakpoints(smallDesktop)) {
+        width: 100%;
+      }
     }
 
     .list__item-img {
@@ -65,8 +76,22 @@
 
   &__list-team {
     .list__item {
-      width: 45%;
-      max-width: 660px;
+      width: calc(50% - 8px);
+
+      @media (max-width: sd.breakpoints(smallDesktop)) {
+        flex-direction: column;
+      }
+
+      @media (max-width: sd.breakpoints(smallTablet)) {
+        flex-direction: row;
+        width: 100%;
+      }
+    }
+
+    .list__item-content {
+      @media (max-width: sd.breakpoints(smallDesktop)) {
+        width: 100%;
+      }
     }
 
     .list__item-title {
@@ -76,6 +101,7 @@
     .list__item-img {
       flex: 0 0 110px;
       width: 110px;
+      height: 110px;
       position: relative;
 
       &::before {
@@ -94,6 +120,8 @@
   }
 
   &__list-tech {
+    justify-content: flex-start;
+
     .list__item {
       align-items: center;
       padding: sd.space(10) sd.space(16);
@@ -107,7 +135,11 @@
     }
 
     .list__item-img {
-      //flex: 1 0 auto;
+      width: fit-content;
+    }
+
+    .list__item-content {
+      width: fit-content;
     }
 
     .list__icon {
@@ -116,11 +148,27 @@
   }
 
   &__footer {
+    &-list {
+      @media (max-width: sd.breakpoints(smallTablet)) {
+        margin-bottom: sd.space(24);
+      }
+    }
+
     &-item {
       display: flex;
       align-items: center;
       gap: sd.space(24);
       margin-bottom: sd.space(20);
+
+      @media (max-width: sd.breakpoints(smallTablet)) {
+        align-items: flex-start;
+      }
+
+      @media (max-width: sd.breakpoints(mobile)) {
+        flex-direction: column;
+        align-items: center;
+        gap: sd.space(8);
+      }
     }
 
     &-title {
@@ -128,6 +176,10 @@
       font-size: 19px;
       line-height: 1.1;
       margin-bottom: sd.space(4);
+
+      @media (max-width: sd.breakpoints(smallTablet)) {
+        text-align: center;
+      }
     }
 
     &-icon {
