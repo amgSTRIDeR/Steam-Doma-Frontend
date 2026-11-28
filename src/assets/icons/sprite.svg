@@ -90,10 +90,10 @@
 <path d="M23.272 5.39685C23.272 7.67503 18.3471 9.52185 12.272 9.52185C6.19684 9.52185 1.27197 7.67503 1.27197 5.39685C1.27197 3.11868 6.19684 1.27185 12.272 1.27185C18.3471 1.27185 23.272 3.11868 23.272 5.39685Z" stroke-width="2.54375" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
 <path d="M1.27197 5.39685V24.6469C1.27197 30.1469 23.272 30.1469 23.272 24.6469V5.39685M1.27197 15.0219C1.27197 20.5219 23.272 20.5219 23.272 15.0219" stroke-width="2.54375" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
 </symbol>
-<symbol id="icon-edu" viewBox="0 0 51 39" fill="none">
-<path d="M1.1499 15.15L25.1499 1.15002L49.1499 15.15L25.1499 29.15L1.1499 15.15Z" stroke-width="2.3" stroke-linejoin="round" stroke="currentColor"/>
-<path d="M11.1499 21.15V33.15C20.4832 39.15 29.8166 39.15 39.1499 33.15V21.15" stroke-width="2.3" stroke-linejoin="round" stroke="currentColor"/>
-<path d="M49.1499 15.15V30.15" stroke-width="2.3" stroke-linejoin="round" stroke="currentColor"/>
+<symbol id="icon-edu" viewBox="0 0 51 39" stroke-width="3.85" fill="none">
+<path d="M1.1499 15.15L25.1499 1.15002L49.1499 15.15L25.1499 29.15L1.1499 15.15Z" stroke-linejoin="round" stroke="currentColor"/>
+<path d="M11.1499 21.15V33.15C20.4832 39.15 29.8166 39.15 39.1499 33.15V21.15" stroke-linejoin="round" stroke="currentColor"/>
+<path d="M49.1499 15.15V30.15"  stroke-linejoin="round" stroke="currentColor"/>
 </symbol>
 
 

@@ -63,7 +63,27 @@
     "techTitle8": "PostgreSQL"
   },
   "footer": {
-    "title": "RS School Educational Project",
-    "description": "This project was developed as part of the training in"
+    "footer": {
+      "eduHeading": "RS School Educational Project",
+      "eduDescription": "This project was developed as part of training at RS School",
+
+      "globeHeading": "Source Code",
+      "globeFrontend": "Frontend repository",
+      "globeBackend": "Backend repository",
+
+      "shieldCheckHeading": "Privacy Policy",
+      "shieldCheckDescription": "Information about technical data, cloud hosting, browser storage, and your rights. Read privacy policy",
+      "shieldCheckLink": "Read privacy policy",
+
+      "databaseHeading": "Data Sources",
+      "databaseDescription": "Game catalog data is sourced from Steam Dataset 2025 by Donald Fountain (VintageDon), licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).\nThe data has been adapted for use in this application.\nAll third-party game titles, trademarks, and images belong to their respective owners.",
+
+      "infoHeading": "Legal Notice",
+      "infoDescription": "This project is not affiliated with, endorsed, or sponsored by Valve Corporation or Steam.",
+
+      "mailHeading": "Contact Us",
+
+      "copyright": "© 2026 Steam At Home project contributors."
+    }
   }
 }

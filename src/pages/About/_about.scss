@@ -107,7 +107,7 @@
     }
 
     .list__item-img {
-      flex: 1 0 auto;
+      //flex: 1 0 auto;
     }
 
     .list__icon {
@@ -116,9 +116,12 @@
   }
 
   &__footer {
-    display: flex;
-    align-items: center;
-    gap: sd.space(24);
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: sd.space(24);
+      margin-bottom: sd.space(20);
+    }
 
     &-title {
       font-weight: 700;
@@ -128,12 +131,19 @@
     }
 
     &-icon {
-      width: sd.space(48);
-      height: sd.space(48);
+      width: sd.space(32);
+      height: sd.space(32);
+      flex-shrink: 0;
     }
 
     &-link {
       color: sd.color(sub);
+    }
+
+    &-links a + a::before {
+      content: ' • ';
+      color: inherit;
+      pointer-events: none;
     }
   }
 }

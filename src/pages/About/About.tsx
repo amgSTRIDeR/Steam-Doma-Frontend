@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Container from '../../components/Container/Container';
 import List from '../../components/List/List';
-import Icon from '../../components/Icon/Icon';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { GOALS_DATA, TEAM_DATA, TECH_STACK_DATA } from './aboutData';
+import AboutFooter from './AboutFooter';
 
 export default function About() {
   const { t } = useTranslation();
@@ -29,23 +28,7 @@ export default function About() {
           <h2 className="about__section-title">{t('about.heading3')}</h2>
           <List data={TECH_STACK_DATA} className="about__list-tech" isIcon />
         </section>
-        <footer className="about__footer">
-          <Icon name="icon-edu" className="about__footer-icon" />
-          <div className="about__footer-content">
-            <h3 className="about__footer-title">{t('footer.title')}</h3>
-            <p>
-              {`${t('footer.description')} `}
-              <Link
-                to="https://rs.school/"
-                className="about__footer-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RS School
-              </Link>
-            </p>
-          </div>
-        </footer>
+        <AboutFooter />
       </Container>
     </div>
   );

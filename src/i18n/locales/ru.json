@@ -63,7 +63,25 @@
     "techTitle8": "PostgreSQL"
   },
   "footer": {
-    "title": "Учебный проект RS School",
-    "description": "Этот проект разработан в рамках обучения в"
+    "eduHeading": "Учебный проект RS School",
+    "eduDescription": "Этот проект разработан в рамках обучения в RS School",
+
+    "globeHeading": "Исходный код",
+    "globeFrontend": "Репозиторий frontend",
+    "globeBackend": "Репозиторий backend",
+
+    "shieldCheckHeading": "Политика конфиденциальности",
+    "shieldCheckDescription": "Информация о технических данных, облачном хостинге, хранении данных в браузере и ваших правах. Читать политику конфиденциальности",
+    "shieldCheckLink": "Читать политику конфиденциальности",
+
+    "databaseHeading": "Источники данных",
+    "databaseDescription": "Данные каталога игр получены из Steam Dataset 2025 автора Donald Fountain (VintageDon), под лицензией Creative Commons Attribution 4.0 International (CC BY 4.0).\nДанные адаптированы для использования в этом приложении.\nВсе сторонние названия игр, товарные знаки и изображения принадлежат соответствующим правообладателям.",
+
+    "infoHeading": "Юридическое уведомление",
+    "infoDescription": "Этот проект не связан, не одобрён и не спонсируется корпорацией Valve или Steam.",
+
+    "mailHeading": "Связаться с нами",
+
+    "copyright": "© 2026 Участники проекта Steam Дома."
   }
 }

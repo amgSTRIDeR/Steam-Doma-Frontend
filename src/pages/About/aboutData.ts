@@ -45,3 +45,88 @@ export const TECH_STACK_DATA: ListItemData[] = [
   { id: 'python', title: 'about.techTitle7' },
   { id: 'postgres', title: 'about.techTitle8' },
 ];
+
+export type FooterSectionId = 'edu' | 'globe' | 'shield-check' | 'database' | 'info' | 'mail';
+
+export interface FooterLink {
+  labelKey: string;
+  url: string;
+  isExternal?: boolean;
+}
+
+export interface FooterSection {
+  id: FooterSectionId;
+  hasDescription?: boolean;
+  links: FooterLink[];
+}
+
+export const FOOTER_SECTIONS: FooterSection[] = [
+  {
+    id: 'edu',
+    hasDescription: true,
+    links: [
+      {
+        labelKey: 'RS School',
+        url: 'https://rs.school',
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    id: 'globe',
+    links: [
+      {
+        labelKey: 'footer.globeFrontend',
+        url: 'https://github.com...',
+        isExternal: true,
+      },
+      {
+        labelKey: 'footer.globeBackend',
+        url: 'https://github.com...',
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    id: 'shield-check',
+    hasDescription: true,
+    links: [
+      {
+        labelKey: 'footer.shieldCheckLink',
+        url: '/privacy-policy',
+        isExternal: false,
+      },
+    ],
+  },
+  {
+    id: 'database',
+    hasDescription: true,
+    links: [
+      {
+        labelKey: 'Steam Dataset 2025',
+        url: 'https://...',
+        isExternal: true,
+      },
+      {
+        labelKey: 'Creative Commons Attribution 4.0 International (CC BY 4.0)',
+        url: 'https://creativecommons.org',
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    id: 'info',
+    hasDescription: true,
+    links: [],
+  },
+  {
+    id: 'mail',
+    links: [
+      {
+        labelKey: 'alex.ovchinnikov.dev@gmail.com',
+        url: 'mailto:alex.ovchinnikov.dev@gmail.com',
+        isExternal: true,
+      },
+    ],
+  },
+];
