@@ -14,6 +14,25 @@ const TEST_QUERY = gql`
   }
 `;
 
+const CATALOG_FILTERS_QUERY = gql`
+  query GetCategories {
+    catalogFilters {
+      genres {
+        id
+        name
+      }
+      categories {
+        id
+        name
+      }
+      platforms {
+        id
+        name
+      }
+    }
+  }
+`;
+
 afterEach(() => {
   vi.restoreAllMocks();
 });
@@ -53,6 +72,45 @@ describe('Apollo Client', () => {
     expect(fetchImplementation).toHaveBeenCalledWith(
       GRAPHQL_URL,
       expect.objectContaining({ credentials: 'include' }),
+    );
+    client.stop();
+  });
+
+  it('retries catalog filter network requests twice before succeeding', async () => {
+    const fetchImplementation = vi
+      .fn()
+      .mockRejectedValueOnce(new TypeError('Network unavailable'))
+      .mockRejectedValueOnce(new TypeError('Network unavailable'))
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            data: { catalogFilters: { genres: [], categories: [], platforms: [] } },
+          }),
+          { headers: { 'Content-Type': 'application/json' } },
+        ),
+      );
+    const client = createApolloClient(fetchImplementation);
+
+    await client.query({ query: CATALOG_FILTERS_QUERY, fetchPolicy: 'network-only' });
+
+    expect(fetchImplementation).toHaveBeenCalledTimes(3);
+    client.stop();
+  });
+
+  it('surfaces the Apollo error after two catalog filter retries fail', async () => {
+    const fetchImplementation = vi.fn().mockRejectedValue(new TypeError('Network unavailable'));
+    const client = createApolloClient(fetchImplementation);
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    await expect(
+      client.query({ query: CATALOG_FILTERS_QUERY, fetchPolicy: 'network-only' }),
+    ).rejects.toBeTruthy();
+
+    expect(fetchImplementation).toHaveBeenCalledTimes(3);
+    expect(consoleError).toHaveBeenCalledOnce();
+    expect(consoleError).toHaveBeenCalledWith(
+      '[Apollo] GraphQL request failed:',
+      expect.anything(),
     );
     client.stop();
   });

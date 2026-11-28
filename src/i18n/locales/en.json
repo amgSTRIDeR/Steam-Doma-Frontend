@@ -12,9 +12,41 @@
     "label": "Enter game title",
     "placeholder": "Search games..."
   },
+  "catalog": {
+    "eyebrow": "CATALOG / STEAM DATASET 2025",
+    "title": "Game catalog",
+    "description": "Search, filters, and sorting",
+    "filterButton": "Filters",
+    "loadingFilters": "Loading filters…",
+    "loadError": "Couldn't load catalog filters.",
+    "retry": "Retry"
+  },
+  "filtersModal": {
+    "title": "Filters",
+    "categories": "Categories",
+    "genres": "Genres",
+    "platforms": "Platforms",
+    "searchCategory": "Find a category",
+    "searchGenre": "Find a genre",
+    "searchPlatform": "Find a platform",
+    "selected": "Selected: {{count}}",
+    "showMore": "More",
+    "showLess": "Show less",
+    "clearSearch": "Clear {{title}} search",
+    "noResults": "No results found",
+    "noOptions": "No options available",
+    "price": "Price, USD",
+    "minimumPrice": "Minimum price, USD",
+    "maximumPrice": "Maximum price, USD",
+    "priceValue": "{{value}} USD",
+    "from": "From",
+    "to": "To",
+    "close": "Close filters",
+    "reset": "Reset",
+    "apply": "Apply"
+  },
   "sidebar": {
     "navTitle": "Navigation",
-    "genresTitle": "Genres",
     "accountTitle": "Account",
     "user": "Profile",
     "settings": "Settings"
@@ -26,23 +58,9 @@
   },
   "apiErrors": {
     "forbidden": "You do not have access to this section.",
+    "requestFailed": "The request failed. Please try again later.",
+    "filtersUnavailable": "Could not load filters. This feature is temporarily unavailable.",
     "dismiss": "Dismiss"
-  },
-  "genres": {
-    "action": "Action",
-    "rpg": "RPG",
-    "adventures": "Adventures",
-    "strategy": "Strategy",
-    "indie": "Indie",
-    "simulation": "Simulation",
-    "shooters": "Shooters",
-    "fighting": "Fighting",
-    "beat-em-up": "Beat-em-up",
-    "rts": "RTS",
-    "turnBased": "Turn-Based",
-    "jrpg": "JRPG",
-    "action-rpg": "Action RPG",
-    "crpg": "CRPG"
   },
   "about": {
     "aboutTitle": "About us",

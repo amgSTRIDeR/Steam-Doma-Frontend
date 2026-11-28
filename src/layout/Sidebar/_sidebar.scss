@@ -31,76 +31,8 @@
     }
   }
 
-  &__list-item {
-    font-family: sd.$sd-font-family;
-
-    &_active {
-      background: sd.color(soft);
-    }
-  }
-
-  &__list-btn {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    align-items: center;
-    gap: sd.space(10);
-    color: sd.color(sub);
-    padding: sd.space(12) sd.space(16);
-    border-radius: sd.radius(sm);
-    transition: 0.4s ease-in;
-
-    &:hover {
-      background-color: sd.color(soft);
-    }
-  }
-
-  &__span {
-    grid-column: 2 / 3;
-    justify-self: start;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: sd.space(24);
-    font-family: sd.$sd-font-family;
-    padding: sd.space(12) sd.space(16);
-  }
-
   &__icon {
     width: 14px;
     height: 14px;
-
-    &_expanded {
-      transform: rotate(90deg);
-    }
-  }
-
-  &__sublist {
-    margin-left: 32px;
-    list-style: none;
-    border-radius: sd.radius(sm);
-    padding: 0 0 sd.space(10);
-  }
-
-  &__subitem {
-  }
-
-  &__subbutton {
-    width: 100%;
-    font-size: 13px;
-    padding: 0 sd.space(12);
-    border: none;
-    border-radius: sd.radius(sm);
-    background: transparent;
-    color: sd.color(sub);
-    text-align: left;
-    cursor: pointer;
-
-    &:hover {
-      color: sd.color(text);
-      background-color: sd.color(soft);
-    }
   }
 }
