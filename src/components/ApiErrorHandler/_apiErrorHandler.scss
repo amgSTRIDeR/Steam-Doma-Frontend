@@ -1,0 +1,44 @@
+@use '../../styles/variables' as sd;
+
+.api-error-notice {
+  position: fixed;
+  z-index: 1000;
+  top: sd.space(16);
+  right: sd.space(16);
+  display: flex;
+  gap: sd.space(16);
+  align-items: center;
+  max-width: calc(100vw - 32px);
+  padding: sd.space(12) sd.space(16);
+  color: sd.color(text);
+  background: sd.color(dangerSoft);
+  border: 1px solid sd.color(danger);
+  border-radius: sd.radius(md);
+
+  button {
+    padding: sd.space(4) sd.space(8);
+    color: inherit;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: sd.radius(sm);
+  }
+}
+
+.login-page {
+  width: 100%;
+  max-width: 720px;
+  padding: sd.space(32);
+
+  h1 {
+    margin-bottom: sd.space(16);
+  }
+
+  p {
+    margin-bottom: sd.space(16);
+  }
+
+  a {
+    color: sd.color(primary);
+  }
+}

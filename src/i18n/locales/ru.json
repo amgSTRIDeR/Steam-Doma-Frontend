@@ -19,6 +19,15 @@
     "user": "Профиль",
     "settings": "Настройки"
   },
+  "auth": {
+    "loginTitle": "Вход",
+    "loginUnavailable": "Авторизация пока не подключена на сервере.",
+    "backToHome": "Вернуться на главную"
+  },
+  "apiErrors": {
+    "forbidden": "У вас нет доступа к этому разделу.",
+    "dismiss": "Закрыть"
+  },
   "genres": {
     "action": "Экшен",
     "rpg": "RPG",
