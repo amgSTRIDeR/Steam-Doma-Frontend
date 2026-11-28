@@ -1,0 +1,472 @@
+@use 'sass:map';
+
+// =============================================================================
+// 1. COLORS — FIGMA v6 / Light & Dark
+// =============================================================================
+$sd-colors-light: (
+  bg: #eaf0f8,
+  nav: #f8fbff,
+  surface: #ffffff,
+  raised: #f2f6fc,
+  soft: #e3edf9,
+  border: #ccdbec,
+  text: #172b48,
+  sub: #4c6585,
+  muted: #7186a3,
+  primary: #1f65da,
+  primaryText: #ffffff,
+  primarySoft: #dceaff,
+  success: #157c52,
+  successSoft: #ddf4e7,
+  warn: #a96311,
+  warnSoft: #fff0d5,
+  danger: #c93e5d,
+  dangerSoft: #ffe5ed,
+  hero: #0d223b,
+  panel: #f0f6fc,
+  logo: #1f65da,
+  logoHover: #5f96f5,
+  logoTitle: #172b48,
+  logoTitleHover: #375075,
+  navBorder: #a4b8d1,
+  activeLink: #dceaff,
+  headerBg: #f8fbff,
+) !default;
+
+$sd-colors-dark: (
+  bg: #091523,
+  nav: #0d1a2c,
+  surface: #11233a,
+  raised: #192f49,
+  soft: #203a58,
+  border: #2c4663,
+  text: #f4f8ff,
+  sub: #a4b8d1,
+  muted: #7290ae,
+  primary: #347bfa,
+  primaryText: #ffffff,
+  primarySoft: #173e76,
+  success: #5cd39c,
+  successSoft: #173c34,
+  warn: #ffbe6b,
+  warnSoft: #503b23,
+  danger: #fc718a,
+  dangerSoft: #492634,
+  hero: #071020,
+  panel: #081725,
+  logo: #459dfe,
+  logoHover: #86a7ca,
+  logoTitle: #f7faff,
+  logoTitleHover: #d4dae6,
+  navBorder: #284564,
+  activeLink: #284564,
+  headerBg: #071626,
+) !default;
+
+/// Theme-aware color for use in component declarations.
+/// Example: color: sd.color(text);
+@function color($token) {
+  @if not map.has-key($sd-colors-light, $token) {
+    @error "Unknown Steam Дома color token: #{$token}";
+  }
+  @return var(--sd-#{$token});
+}
+
+// For calculations requiring a compile-time value (instead of var(--...)).
+@function raw-color($token, $theme: light) {
+  $colors: $sd-colors-light;
+  @if $theme == dark {
+    $colors: $sd-colors-dark;
+  }
+  @if not map.has-key($colors, $token) {
+    @error "Unknown Steam Дома color token: #{$token}";
+  }
+  @return map.get($colors, $token);
+}
+
+[data-theme='dark'] {
+  --header-gradient-bg: linear-gradient(to right, #061523, #0b1d31, #071626);
+  --list-gradient-bg: linear-gradient(135deg, #10233b, #152d49);
+  --sidebar-gradient-bg: linear-gradient(135deg, #071625, #0b1d31);
+  --about-header-gradient-bg: linear-gradient(to right, #061523 50%, transparent);
+}
+
+[data-theme='light'] {
+  --header-gradient-bg: linear-gradient(to right, #f8fbff, #ffffff, #f8fbff);
+  --list-gradient-bg: linear-gradient(135deg, #eaf0f8, #f8fbff);
+  --sidebar-gradient-bg: linear-gradient(135deg, #f8fbff, #ffffff);
+  --about-header-gradient-bg: linear-gradient(to right, #f8fbff 50%, transparent);
+}
+
+// =============================================================================
+// 2. SPACING / RADII / VIEWPORT REFERENCE SIZES — FIGMA v6
+// =============================================================================
+$sd-spacing: (
+  0: 0px,
+  4: 4px,
+  8: 8px,
+  10: 10px,
+  12: 12px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  32: 32px,
+  40: 40px,
+  48: 48px,
+  64: 64px,
+) !default;
+
+$sd-radius: (
+  sm: 6px,
+  md: 9px,
+  lg: 12px,
+  xl: 18px,
+  pill: 999px,
+) !default;
+
+$sd-breakpoints: (
+  mobile: 390px,
+  smallTablet: 480px,
+  tablet: 768px,
+  burger: 864px,
+  smallDesktop: 1100px,
+  desktop: 1440px,
+) !default;
+// Note: mobile 390px and desktop 1440px are Figma frame reference widths.
+// For fluid app layout, tablet 768px is the main mobile/desktop transition.
+
+$sd-mui-spacing-unit: 4px !default; // Matches createTheme({ spacing: 4 })
+
+@function space($size) {
+  @if not map.has-key($sd-spacing, $size) {
+    @error "Unknown spacing key: #{$size}; use 0, 4, 8, ..., 64.";
+  }
+  @return map.get($sd-spacing, $size);
+}
+
+@function radius($size) {
+  @if not map.has-key($sd-radius, $size) {
+    @error "Unknown radius key: #{$size}";
+  }
+  @return map.get($sd-radius, $size);
+}
+
+@function breakpoints($key) {
+  @return map.get($sd-breakpoints, $key);
+}
+
+@mixin up($size) {
+  @if not map.has-key($sd-breakpoints, $size) {
+    @error "Unknown breakpoint: #{$size}";
+  }
+  @media (min-width: #{map.get($sd-breakpoints, $size)}) {
+    @content;
+  }
+}
+
+@mixin down($size) {
+  @if not map.has-key($sd-breakpoints, $size) {
+    @error "Unknown breakpoint: #{$size}";
+  }
+  @media (max-width: calc(#{map.get($sd-breakpoints, $size)} - 0.02px)) {
+    @content;
+  }
+}
+
+// =============================================================================
+// 3. TYPOGRAPHY — FIGMA v6 / Inter variable
+// =============================================================================
+$sd-font-family:
+  'Inter',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Arial,
+  sans-serif !default;
+$sd-font-family-mono: ui-monospace, 'SFMono-Regular', Consolas, monospace !default; // [EXTENSION]
+$sd-typography: (
+  display: (
+    size: 40px,
+    weight: 800,
+    line-height: 110%,
+    letter-spacing: 0px,
+  ),
+  h1: (
+    size: 32px,
+    weight: 760,
+    line-height: 118%,
+    letter-spacing: 0px,
+  ),
+  h2: (
+    size: 26px,
+    weight: 740,
+    line-height: 120%,
+    letter-spacing: 0px,
+  ),
+  h3: (
+    size: 21px,
+    weight: 710,
+    line-height: 125%,
+    letter-spacing: 0px,
+  ),
+  subtitle: (
+    size: 17px,
+    weight: 650,
+    line-height: 132%,
+    letter-spacing: 0px,
+  ),
+  body-l: (
+    size: 16px,
+    weight: 400,
+    line-height: 150%,
+    letter-spacing: 0px,
+  ),
+  body-m: (
+    size: 14px,
+    weight: 400,
+    line-height: 150%,
+    letter-spacing: 0px,
+  ),
+  body-s: (
+    size: 13px,
+    weight: 450,
+    line-height: 145%,
+    letter-spacing: 0px,
+  ),
+  button: (
+    size: 14px,
+    weight: 650,
+    line-height: 125%,
+    letter-spacing: 0px,
+  ),
+  caption: (
+    size: 12px,
+    weight: 400,
+    line-height: 140%,
+    letter-spacing: 0px,
+  ),
+  overline: (
+    size: 11px,
+    weight: 720,
+    line-height: 140%,
+    letter-spacing: 0px,
+  ),
+) !default;
+
+@mixin text($variant) {
+  @if not map.has-key($sd-typography, $variant) {
+    @error "Unknown type style: #{$variant}";
+  }
+  $t: map.get($sd-typography, $variant);
+  font-family: $sd-font-family;
+  font-size: map.get($t, size);
+  font-weight: map.get($t, weight);
+  line-height: map.get($t, line-height);
+  letter-spacing: map.get($t, letter-spacing);
+}
+
+// =============================================================================
+// 4. PRACTICAL COMPONENT TOKENS — EXTENSION, not extracted from Figma
+// =============================================================================
+$sd-components: (
+  control-height-sm: 32px,
+  control-height-md: 40px,
+  control-height-lg: 48px,
+  icon-size-xs: 12px,
+  icon-size-sm: 16px,
+  icon-size-md: 20px,
+  icon-size-lg: 24px,
+  header-height: 64px,
+  sidebar-width: 248px,
+  content-max-width: 1280px,
+  border-width: 1px,
+  focus-ring-width: 2px,
+  transition-fast: 120ms,
+  transition-normal: 200ms,
+  transition-slow: 320ms,
+) !default;
+
+$sd-z-index: (
+  header: 100,
+  dropdown: 200,
+  sticky: 250,
+  overlay: 1000,
+  modal: 1100,
+  toast: 1200,
+  tooltip: 1300,
+) !default;
+
+@function z($layer) {
+  @if not map.has-key($sd-z-index, $layer) {
+    @error "Unknown z-index layer: #{$layer}";
+  }
+  @return map.get($sd-z-index, $layer);
+}
+
+@function component($token) {
+  @if not map.has-key($sd-components, $token) {
+    @error "Unknown component token: #{$token}";
+  }
+  @return map.get($sd-components, $token);
+}
+
+$sd-elevation-light: (
+  sm: (
+    0 1px 4px rgb(23 43 72 / 8%),
+  ),
+  md: (
+    0 6px 20px rgb(23 43 72 / 12%),
+  ),
+  lg: (
+    0 16px 48px rgb(23 43 72 / 18%),
+  ),
+) !default;
+$sd-elevation-dark: (
+  sm: (
+    0 1px 4px rgb(0 0 0 / 18%),
+  ),
+  md: (
+    0 6px 20px rgb(0 0 0 / 28%),
+  ),
+  lg: (
+    0 16px 48px rgb(0 0 0 / 42%),
+  ),
+) !default;
+
+// =============================================================================
+// 5. RUNTIME CSS CUSTOM PROPERTIES — auto-switch via [data-theme]
+// =============================================================================
+@mixin emit-color-vars($colors) {
+  @each $name, $value in $colors {
+    --sd-#{$name}: #{$value};
+    --sd-color-#{$name}: var(--sd-#{$name}); // friendly alias
+  }
+}
+@mixin emit-elevation-vars($elevation) {
+  @each $name, $value in $elevation {
+    --sd-shadow-#{$name}: #{$value};
+  }
+}
+
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  @include emit-color-vars($sd-colors-light);
+  @include emit-elevation-vars($sd-elevation-light);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  @include emit-color-vars($sd-colors-dark);
+  @include emit-elevation-vars($sd-elevation-dark);
+}
+
+:root {
+  // FIGMA: spacing scale
+  @each $name, $value in $sd-spacing {
+    --sd-space-#{$name}: #{$value};
+  }
+  // FIGMA: border radii
+  @each $name, $value in $sd-radius {
+    --sd-radius-#{$name}: #{$value};
+  }
+  // FIGMA: typography styles
+  --sd-font-family: #{$sd-font-family};
+  --sd-font-family-mono: #{$sd-font-family-mono};
+  --sd-mui-spacing-unit: #{$sd-mui-spacing-unit};
+  @each $name, $values in $sd-typography {
+    --sd-font-#{$name}-size: #{map.get($values, size)};
+    --sd-font-#{$name}-weight: #{map.get($values, weight)};
+    --sd-font-#{$name}-line-height: #{map.get($values, line-height)};
+    --sd-font-#{$name}-letter-spacing: #{map.get($values, letter-spacing)};
+  }
+  @each $name, $value in $sd-breakpoints {
+    --sd-breakpoint-#{$name}: #{$value};
+  }
+  // EXTENSION: component sizes & timing
+  @each $name, $value in $sd-components {
+    --sd-#{$name}: #{$value};
+  }
+  @each $name, $value in $sd-z-index {
+    --sd-z-#{$name}: #{$value};
+  }
+}
+
+// =============================================================================
+// 6. OPTIONAL BASE STYLES — opt-in via @include sd.foundation();
+// =============================================================================
+@mixin foundation() {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: $sd-font-family;
+  }
+  body {
+    margin: 0;
+    background-color: color(bg);
+    color: color(text);
+    @include text(body-m);
+    transition:
+      background-color map.get($sd-components, transition-normal) ease,
+      color map.get($sd-components, transition-normal) ease;
+
+    &_locked {
+      overflow-y: hidden;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid color(primary);
+    outline-offset: 2px;
+  }
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+@mixin visuallyHidden() {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/*
+USAGE EXAMPLE (put in app.scss, NOT inside this file):
+  @use "./styles/steam-doma-variables" as sd;
+  @include sd.foundation();
+  .game-card {
+    background: sd.color(surface);
+    color: sd.color(text);
+    border: 1px solid sd.color(border);
+    border-radius: sd.radius(lg);
+    padding: sd.space(16);
+    box-shadow: var(--sd-shadow-sm);
+    @include sd.text(body-m);
+    @include sd.down(tablet) { padding: sd.space(12); }
+  }
+
+  // React (e.g. in your ThemeProvider or theme toggle handler):
+  // document.documentElement.dataset.theme = "dark";
+  // document.documentElement.dataset.theme = "light";
+  // Keep MUI createSteamDomaTheme(mode) synchronized with data-theme.
+*/

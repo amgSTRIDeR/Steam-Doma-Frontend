@@ -1,0 +1,208 @@
+@use '../../styles/variables' as sd;
+
+.sidebar {
+  height: 100%;
+  min-height: 100vh;
+  background: var(--sidebar-gradient-bg); //sd.color(nav);
+  color: sd.color(sub);
+  border-right: 1px solid sd.color(border);
+  padding: 0 20px;
+
+  @media (max-width: sd.breakpoints(tablet)) {
+    max-width: 100vw;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: fit-content;
+    min-height: 70px;
+    background: sd.color(nav);
+    padding: 0;
+    z-index: 10;
+  }
+
+  &__inner {
+    @media (max-width: sd.breakpoints(tablet)) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 90px 1fr 1fr 90px 1fr 1fr 90px 1fr 1fr 90px 1fr;
+      justify-content: space-between;
+      align-items: center;
+      background: sd.color(nav);
+    }
+  }
+
+  &__title {
+    font-family: sd.$sd-font-family;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: sd.color(muted);
+    padding-left: sd.space(16);
+    margin-bottom: sd.space(16);
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    border-bottom: 1px solid sd.color(border);
+
+    @media (max-width: sd.breakpoints(tablet)) {
+      grid-column: 1 / 10;
+      grid-row: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr 1fr auto 1fr 1fr auto 1fr;
+      border-bottom: none;
+      padding: 0 !important;
+
+      .nav__item:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    padding: 20px 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid sd.color(border);
+    }
+  }
+
+  &__list {
+    @media (max-width: sd.breakpoints(tablet)) {
+      .nav__link {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: sd.breakpoints(smallTablet)) {
+      .nav__link {
+        gap: 8px;
+      }
+    }
+  }
+
+  &__list_nav {
+    @media (max-width: sd.breakpoints(tablet)) {
+      grid-column: 1 / -1;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr 1fr auto 1fr 1fr auto 1fr;
+
+      .nav__item:first-of-type {
+        grid-column: 2 / 3;
+      }
+
+      .nav__item:nth-of-type(2) {
+        grid-column: 5 / 6;
+      }
+
+      .nav__item:nth-of-type(3) {
+        grid-column: 8 / 9;
+      }
+    }
+  }
+
+  &__list-item {
+    font-family: sd.$sd-font-family;
+
+    &_active {
+      background: sd.color(soft);
+    }
+  }
+
+  &__list-btn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: sd.space(10);
+    color: sd.color(sub);
+    padding: sd.space(12) sd.space(16);
+    border-radius: sd.radius(sm);
+    transition: 0.4s ease-in;
+
+    &:hover {
+      background-color: sd.color(soft);
+    }
+  }
+
+  &__span {
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: sd.space(24);
+    font-family: sd.$sd-font-family;
+    padding: sd.space(12) sd.space(16);
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+
+    &_expanded {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__sublist {
+    margin-left: 32px;
+    list-style: none;
+    border-radius: sd.radius(sm);
+    padding: 0 0 sd.space(10);
+  }
+
+  &__subbutton {
+    width: 100%;
+    font-size: 13px;
+    padding: 0 sd.space(12);
+    border: none;
+    border-radius: sd.radius(sm);
+    background: transparent;
+    color: sd.color(sub);
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: sd.color(text);
+      background-color: sd.color(soft);
+    }
+  }
+
+  &__account {
+    @media (max-width: sd.breakpoints(tablet)) {
+      grid-column: 10 / 13;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      padding: 0;
+
+      .sidebar__list_account {
+        grid-column: 2 / 3;
+        display: grid;
+        background: sd.color(nav);
+      }
+
+      .nav__item:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  &__genres {
+    @media (max-width: sd.breakpoints(tablet)) {
+      display: none;
+    }
+  }
+}

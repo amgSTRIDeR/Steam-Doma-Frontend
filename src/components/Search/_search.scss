@@ -1,0 +1,67 @@
+@use '../../styles/variables' as sd;
+
+.search {
+  position: absolute;
+  top: 0;
+  right: 335px;
+
+  @media (max-width: sd.breakpoints(smallDesktop)) {
+    right: 230px;
+  }
+
+  @media (max-width: sd.breakpoints(tablet)) {
+    right: 105px;
+  }
+
+  &__label {
+    @include sd.visuallyHidden();
+  }
+
+  &__input-wrapper {
+    width: fit-content;
+    position: relative;
+  }
+
+  &__input {
+    width: 260px;
+    color: sd.color(text);
+    background: sd.color(raised);
+    padding: 10px 16px 10px 45px;
+    border-radius: sd.radius(md);
+    border: 1px solid sd.color(navBorder);
+    transition: 0.5s ease-in;
+
+    &::placeholder {
+      font-family: sd.$sd-font-family;
+      color: sd.color(sub);
+      @include sd.text(caption);
+    }
+
+    @media (max-width: sd.breakpoints(smallDesktop)) {
+      width: 45px;
+      padding-right: 0;
+      border: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &:focus-within {
+      width: 260px;
+      padding-right: 10px;
+      border: 1px solid sd.color(navBorder);
+      outline: none;
+    }
+  }
+
+  &__icon {
+    width: sd.component(icon-size-md);
+    height: sd.component(icon-size-md);
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: sd.color(sub);
+  }
+}

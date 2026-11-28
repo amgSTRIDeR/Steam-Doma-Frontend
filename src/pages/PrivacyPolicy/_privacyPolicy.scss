@@ -1,0 +1,27 @@
+@use '../../styles/variables' as sd;
+
+.privacy {
+  background: sd.color(nav);
+  padding: sd.space(20);
+
+  &__inner {
+    background: sd.color(bg);
+    border: 1px solid sd.color(border);
+    border-radius: sd.radius(md);
+    padding: sd.space(20);
+  }
+
+  &__header {
+    border-bottom: 1px solid sd.color(border);
+    padding: sd.space(12) sd.space(10) sd.space(24);
+  }
+
+  &__section {
+    padding: sd.space(12) sd.space(10);
+  }
+
+  &__title,
+  &__heading {
+    margin-bottom: sd.space(12);
+  }
+}
