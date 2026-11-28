@@ -20,6 +20,7 @@ Steam Дома — это frontend-приложение интернет-маг�
 - React 19
 - TypeScript
 - Vite 8
+- Apollo Client 4 + GraphQL
 - Vitest + Testing Library
 - ESLint + Prettier
 - Docker / Dev Container
@@ -83,7 +84,7 @@ http://localhost:5173
 
 ### Подключение к backend
 
-Для локального запуска скопируйте `.env.example` в `.env`.
+Для локального запуска скопируйте `.env.example` в `.env`. Адрес GraphQL API задаётся переменной `VITE_GRAPHQL_URL`; по умолчанию используется `/graphql`. Apollo Client подключён на уровне приложения и использует кэширование запросов.
 
 ## Запуск через Docker
 
