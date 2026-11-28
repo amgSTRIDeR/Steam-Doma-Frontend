@@ -12,6 +12,7 @@
 @use './components/List/list';
 @use './pages/About/about';
 @use './pages/Legal/legal';
+@use './components/ApiErrorHandler/apiErrorHandler';
 
 @include sd.foundation();
 

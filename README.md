@@ -84,7 +84,7 @@ http://localhost:5173
 
 ### Подключение к backend
 
-Для локального запуска скопируйте `.env.example` в `.env`. Адрес GraphQL API задаётся переменной `VITE_GRAPHQL_URL`; по умолчанию используется `/graphql`. Apollo Client подключён на уровне приложения и использует кэширование запросов.
+GraphQL API задаётся переменной `VITE_GRAPHQL_URL`; удалённый endpoint указан в `.env.example`.
 
 ## Запуск через Docker
 

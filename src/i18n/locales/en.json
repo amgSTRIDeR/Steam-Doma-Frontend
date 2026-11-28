@@ -19,6 +19,15 @@
     "user": "Profile",
     "settings": "Settings"
   },
+  "auth": {
+    "loginTitle": "Sign in",
+    "loginUnavailable": "Authentication is not available on the server yet.",
+    "backToHome": "Back to home"
+  },
+  "apiErrors": {
+    "forbidden": "You do not have access to this section.",
+    "dismiss": "Dismiss"
+  },
   "genres": {
     "action": "Action",
     "rpg": "RPG",
