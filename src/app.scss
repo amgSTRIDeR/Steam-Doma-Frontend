@@ -12,6 +12,7 @@
 @use './components/List/list';
 @use './pages/About/about';
 @use './components//Breadcrumbs/breadcrumbs';
+@use './pages/PrivacyPolicy/privacyPolicy';
 
 @include sd.foundation();
 

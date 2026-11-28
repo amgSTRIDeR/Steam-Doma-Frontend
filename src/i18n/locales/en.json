@@ -83,5 +83,48 @@
     "mailHeading": "Contact Us",
 
     "copyright": "© 2026 Steam At Home project contributors."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective date: November 26, 2026",
+    "email": "alex.ovchinnikov.dev@gmail.com",
+    "sections": {
+      "controller": {
+        "heading": "Data Controller",
+        "paragraphs": ["Alexey Ovchinnikov", "Ituzaingo 1537, Montevideo, Uruguay"],
+        "emailLabel": "Email:"
+      },
+      "processing": {
+        "heading": "Data Processing",
+        "paragraphs": [
+          "Steam At Home does not require user registration and does not use analytics or advertising tracking.",
+          "The hosting provider may process technical information, including IP addresses, to ensure the operation and security of the website.",
+          "If you contact us by email, your address and message will be processed to respond to your inquiry and stored only for as long as necessary for this purpose or to comply with legal obligations.",
+          "Providing information by email is voluntary."
+        ]
+      },
+      "hosting": {
+        "heading": "Hosting",
+        "paragraphs": [
+          "The application is hosted on Microsoft Azure in the Brazil South region, Brazil.",
+          "Microsoft may process technical information necessary to provide cloud hosting services. Data processing by the hosting provider is governed by the applicable Microsoft Data Protection Addendum."
+        ]
+      },
+      "storage": {
+        "heading": "Cookies and Local Storage",
+        "paragraphs": [
+          "Cookies and local storage are used exclusively to remember the selected interface language and theme.",
+          "These settings can be deleted in your browser settings."
+        ]
+      },
+      "rights": {
+        "heading": "Your Rights",
+        "paragraphs": [
+          "In accordance with applicable data protection laws, you may request access to, rectification, erasure, or portability of your personal data, restrict its processing, object to it, or withdraw consent, where applicable.",
+          "To exercise your rights, please contact alex.ovchinnikov.dev@gmail.com.",
+          "You may also lodge a complaint with the Uruguayan data protection authority, Unidad Reguladora y de Control de Datos Personales (URCDP)."
+        ]
+      }
+    }
   }
 }
