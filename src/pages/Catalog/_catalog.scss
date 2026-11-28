@@ -1,0 +1,144 @@
+@use '../../styles/variables' as sd;
+
+.catalog {
+  width: 100%;
+  padding: sd.space(24);
+  color: sd.color(text);
+
+  &__header {
+    margin-bottom: sd.space(24);
+  }
+
+  &__eyebrow {
+    margin-bottom: sd.space(8);
+    color: sd.color(primary);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  &__title {
+    margin: 0 0 sd.space(4);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  &__description {
+    color: sd.color(muted);
+    font-size: 0.875rem;
+  }
+
+  &__toolbar {
+    display: flex;
+    align-items: flex-start;
+    gap: sd.space(16);
+    margin-bottom: sd.space(24);
+  }
+
+  &__filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: sd.space(12);
+    width: 11.625rem;
+    min-height: 2.625rem;
+    padding: sd.space(8) sd.space(16);
+    color: sd.color(text);
+    background: sd.color(raised);
+    border: 1px solid sd.color(border);
+    border-radius: sd.radius(md);
+    font-size: 0.875rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+      background-color 0.15s,
+      border-color 0.15s;
+
+    &:not(:disabled):hover {
+      background: sd.color(soft);
+      border-color: sd.color(navBorder);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.72;
+    }
+
+    &--error {
+      background: sd.color(dangerSoft);
+    }
+
+    &:focus-visible {
+      outline: 2px solid sd.color(primary);
+      outline-offset: 3px;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+      width: 1rem;
+      height: 1rem;
+      flex: 0 0 auto;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &--loading span,
+    &--loading svg {
+      animation: catalog-filter-pulse 1.5s ease-in-out infinite;
+    }
+  }
+
+  &__status,
+  &__error {
+    color: sd.color(muted);
+    font-size: 0.875rem;
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: sd.space(8);
+
+    button {
+      padding: sd.space(4) sd.space(8);
+      color: sd.color(primary);
+      background: transparent;
+      border: 0;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes catalog-filter-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.42;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog {
+    padding: sd.space(16);
+
+    &__filter-button {
+      width: 100%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog__filter-button--loading span,
+  .catalog__filter-button--loading svg {
+    animation: none;
+  }
+}

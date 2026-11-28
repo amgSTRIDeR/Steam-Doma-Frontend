@@ -12,9 +12,41 @@
     "label": "Введите название игры",
     "placeholder": "Поиск по играм..."
   },
+  "catalog": {
+    "eyebrow": "КАТАЛОГ / STEAM DATASET 2025",
+    "title": "Каталог игр",
+    "description": "Поиск, фильтры и сортировка",
+    "filterButton": "Фильтры",
+    "loadingFilters": "Загружаем фильтры…",
+    "loadError": "Не удалось загрузить фильтры каталога.",
+    "retry": "Повторить"
+  },
+  "filtersModal": {
+    "title": "Фильтры",
+    "categories": "Категории",
+    "genres": "Жанры",
+    "platforms": "Платформы",
+    "searchCategory": "Найти категорию",
+    "searchGenre": "Найти жанр",
+    "searchPlatform": "Найти платформу",
+    "selected": "Выбрано: {{count}}",
+    "showMore": "Ещё",
+    "showLess": "Свернуть",
+    "clearSearch": "Очистить поиск: {{title}}",
+    "noResults": "Ничего не найдено",
+    "noOptions": "Нет доступных вариантов",
+    "price": "Цена, USD",
+    "minimumPrice": "Минимальная цена, USD",
+    "maximumPrice": "Максимальная цена, USD",
+    "priceValue": "{{value}} USD",
+    "from": "От",
+    "to": "До",
+    "close": "Закрыть фильтры",
+    "reset": "Сбросить",
+    "apply": "Применить"
+  },
   "sidebar": {
     "navTitle": "НАВИГАЦИЯ",
-    "genresTitle": "ЖАНРЫ",
     "accountTitle": "АККАУНТ",
     "user": "Профиль",
     "settings": "Настройки"
@@ -26,23 +58,9 @@
   },
   "apiErrors": {
     "forbidden": "У вас нет доступа к этому разделу.",
+    "requestFailed": "Не удалось выполнить запрос. Попробуйте позже.",
+    "filtersUnavailable": "Не удалось загрузить фильтры — функционал временно недоступен.",
     "dismiss": "Закрыть"
-  },
-  "genres": {
-    "action": "Экшен",
-    "rpg": "RPG",
-    "adventures": "Приключения",
-    "strategy": "Cтратегия",
-    "indie": "Инди",
-    "simulation": "Симуляторы",
-    "shooters": "Шутеры",
-    "fighting": "Файтинг",
-    "beat-em-up": "Beat-em-up",
-    "rts": "RTS",
-    "turnBased": "Пошаговые",
-    "jrpg": "JRPG",
-    "action-rpg": "Action RPG",
-    "crpg": "CRPG"
   },
   "about": {
     "aboutTitle": "О\u00A0нас",
